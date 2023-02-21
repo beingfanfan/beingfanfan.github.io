@@ -15,7 +15,7 @@
   
   <link rel="canonical" href="http://example.com/2023/02/21/blog20230221_%E7%A7%91%E5%88%9B%E6%9D%BF%E7%88%AC%E8%99%AB/">
   
-  <meta name="description" content="作者： 范思妤 (南京大学)邮箱： &amp;#102;&amp;#x61;&amp;#x6e;&amp;#x73;&amp;#105;&amp;#121;&amp;#x75;&amp;#64;&amp;#115;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#108;&amp;#x2e;&amp;#110;&amp;#106;&amp;#117;&amp;#x2e;&amp;#x65;&amp;#x64;&amp;#x75;&amp;#x2e;&amp;">
+  <meta name="description" content="1.科创板审核问询披露科创板试点的注册制改革，强调 “以信息披露为核心”。为在发行上市审核坚持以信息披露为核心，把好上市企业入口质量关，上交所主要采用公开化问询式审核方式，即交易所提出问询的问题，发行人对这些问题进行回复和说明，中介机构对问询事项的核查过程和结论，以“一问一答”的方式及时向市场公开。">
   
   
   <meta name="author" content="FanFan">
@@ -26,14 +26,14 @@
   <meta property="og:type" content="article" />
   <meta property="og:title" content="Python 爬虫：基于selenium爬取科创板审核问询披露" />
   
-  <meta property="og:description" content="作者： 范思妤 (南京大学)邮箱： &amp;#102;&amp;#x61;&amp;#x6e;&amp;#x73;&amp;#105;&amp;#121;&amp;#x75;&amp;#64;&amp;#115;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#108;&amp;#x2e;&amp;#110;&amp;#106;&amp;#117;&amp;#x2e;&amp;#x65;&amp;#x64;&amp;#x75;&amp;#x2e;&amp;">
+  <meta property="og:description" content="1.科创板审核问询披露科创板试点的注册制改革，强调 “以信息披露为核心”。为在发行上市审核坚持以信息披露为核心，把好上市企业入口质量关，上交所主要采用公开化问询式审核方式，即交易所提出问询的问题，发行人对这些问题进行回复和说明，中介机构对问询事项的核查过程和结论，以“一问一答”的方式及时向市场公开。">
   
   <meta property="og:url" content="http://example.com/2023/02/21/blog20230221_%E7%A7%91%E5%88%9B%E6%9D%BF%E7%88%AC%E8%99%AB/" />
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Python 爬虫：基于selenium爬取科创板审核问询披露">
   
-  <meta name="twitter:description" content="作者： 范思妤 (南京大学)邮箱： &amp;#102;&amp;#x61;&amp;#x6e;&amp;#x73;&amp;#105;&amp;#121;&amp;#x75;&amp;#64;&amp;#115;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#108;&amp;#x2e;&amp;#110;&amp;#106;&amp;#117;&amp;#x2e;&amp;#x65;&amp;#x64;&amp;#x75;&amp;#x2e;&amp;">
+  <meta name="twitter:description" content="1.科创板审核问询披露科创板试点的注册制改革，强调 “以信息披露为核心”。为在发行上市审核坚持以信息披露为核心，把好上市企业入口质量关，上交所主要采用公开化问询式审核方式，即交易所提出问询的问题，发行人对这些问题进行回复和说明，中介机构对问询事项的核查过程和结论，以“一问一答”的方式及时向市场公开。">
   
   
   
@@ -198,12 +198,6 @@
             <h2>Python 爬虫：基于selenium爬取科创板审核问询披露</h2>
 
   <p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/Lianxh_%E8%A3%85%E9%A5%B0%E9%BB%84%E7%BA%BF.png"></p>
-<blockquote>
-<p><strong>作者：</strong> 范思妤 (南京大学)<br><strong>邮箱：</strong> <a href="mailto:&#102;&#x61;&#x6e;&#x73;&#105;&#121;&#x75;&#64;&#115;&#x6d;&#x61;&#105;&#108;&#x2e;&#110;&#106;&#117;&#x2e;&#x65;&#x64;&#x75;&#x2e;&#x63;&#x6e;">&#102;&#x61;&#x6e;&#x73;&#105;&#121;&#x75;&#64;&#115;&#x6d;&#x61;&#105;&#108;&#x2e;&#110;&#106;&#117;&#x2e;&#x65;&#x64;&#x75;&#x2e;&#x63;&#x6e;</a> </p>
-</blockquote>
-<hr>
-<p><strong>目录</strong><br>[TOC]</p>
-<hr>
 <h2 id="1-科创板审核问询披露"><a href="#1-科创板审核问询披露" class="headerlink" title="1.科创板审核问询披露"></a>1.科创板审核问询披露</h2><p>科创板试点的注册制改革，强调 “以信息披露为核心”。为在发行上市审核坚持以信息披露为核心，把好上市企业入口质量关，上交所主要采用公开化问询式审核方式，即交易所提出问询的问题，发行人对这些问题进行回复和说明，中介机构对问询事项的核查过程和结论，以“一问一答”的方式及时向市场公开。</p>
 <p>文本重点关注如何通过Python的<code>selenium</code>库爬取上述审核问询流程披露的原始文件，并在发行公司层面对问询与回复情况进行汇总统计。</p>
 <h2 id="2-爬虫实战"><a href="#2-爬虫实战" class="headerlink" title="2.爬虫实战"></a>2.爬虫实战</h2><h3 id="2-1-安装selenium及浏览器驱动"><a href="#2-1-安装selenium及浏览器驱动" class="headerlink" title="2.1 安装selenium及浏览器驱动"></a>2.1 安装selenium及浏览器驱动</h3><p>本文中，我们使用Python中的<code>selenium</code>库对网页进行爬取。<code>selenium</code>通过创建模拟浏览器的方式进行爬取，可以完全模拟真实用户的动态操作。</p>
