@@ -1,628 +1,335 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 6.3.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css">
+  <!-- Minima -->
+  <!-- Hexo theme created by @adisaktijrs -->
 
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  
+  <title>FanFan&#39;s Workspace</title>
+  
+  <link rel="canonical" href="http://example.com/">
+  
+  <meta name="description" content="">
+  
+  
+  <meta name="author" content="FanFan">
+  
+  
+  <meta property="og:image" content="http://example.com/images/thumbnail.jpg">
+  
+  
+  <meta property="og:site_name" content="FanFan&#39;s Workspace" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="FanFan&#39;s Workspace" />
+  
+  <meta property="og:description" content="">
+  
+  <meta property="og:url" content="http://example.com/" />
 
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
-  </script>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FanFan&#39;s Workspace">
+  
+  <meta name="twitter:description" content="">
+  
+  
+  
+  <meta name="twitter:image" content="http://example.com/images/thumbnail.jpg">
+  
+  
+  <meta name="twitter:url" content="http://example.com/" />
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="FanFan&#39;s Workspace">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="FanFan&#39;s Workspace">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="FanFan">
-<meta name="twitter:card" content="summary">
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="canonical" href="http://example.com/">
+  <!-- Preload fonts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="preload" href="/fonts/dm-serif-display-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
 
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
+<link rel="stylesheet" href="/css/normalize.css">
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
+  
+<link rel="stylesheet" href="/css/skeleton.css">
 
-  <title>FanFan's Workspace</title>
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+  
+<link rel="stylesheet" href="/css/prism-dark.css">
+
+  
+<link rel="stylesheet" href="/css/prism-line-numbers.css">
+
+  <!-- User css -->
+  
+  
+<link rel="stylesheet" href="/css/user.css">
+
   
 
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
 
-
-
-
-
-  <noscript>
+  <!-- Custom Theme Color Style
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
+  a:not(.icon) {
+    text-decoration-color: #0FA0CE;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 50%,
+      #0FA0CE 50%
+    );
   }
+  blockquote {
+    border-left: 8px solid #0FA0CE;
+  }
+  .nanobar .bar {
+    background: #0FA0CE;
+  }
+  .button.button-primary:hover,
+  button.button-primary:hover,
+  input[type="submit"].button-primary:hover,
+  input[type="reset"].button-primary:hover,
+  input[type="button"].button-primary:hover,
+  .button.button-primary:focus,
+  button.button-primary:focus,
+  input[type="submit"].button-primary:focus,
+  input[type="reset"].button-primary:focus,
+  input[type="button"].button-primary:focus {
+    background-color: #0FA0CE;
+    border-color: #0FA0CE;
+  }
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="url"]:focus,
+  input[type="password"]:focus,
+  textarea:focus,
+  select:focus {
+    border: 1px solid #0FA0CE;
+  }
+</style>
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
+  <!-- Google Analytics (With Privacy Settings On)
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  
 
-</head>
+  
+  <script src="/js/pic.min.js" defer></script>
+  
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+  
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div>
+
+        <div class="row">
+  <div class="two columns" style="max-width: 50px">
+    <h1 class="mt-2 mode">
+      <div onclick=setDarkMode(true) id="darkBtn">🌑</div>
+      <div onclick=setDarkMode(false) id="lightBtn" class=hidden>☀️</div>
+      <script >
+        if (localStorage.getItem('preferredTheme') == 'dark') {
+          setDarkMode(true)
+        }
+        function setDarkMode(isDark) {
+          var darkBtn = document.getElementById('darkBtn')
+          var lightBtn = document.getElementById('lightBtn')
+          if (isDark) {
+            lightBtn.style.display = "block"
+            darkBtn.style.display = "none"
+            localStorage.setItem('preferredTheme', 'dark');
+          } else {
+            lightBtn.style.display = "none"
+            darkBtn.style.display = "block"
+            localStorage.removeItem('preferredTheme');
+          }
+          document.body.classList.toggle("darkmode");
+        }
+      </script>
+    </h1>
   </div>
 
-  <div class="site-meta">
+  <div class="six columns ml-1">
+    <h1 class="mt-2">
+      Hi Folks.
+    </h1>
+  </div>
 
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">FanFan's Workspace</h1>
-      <span class="logo-line-after"><i></i></span>
+  <div class="twelve columns">
+    <div class="row">
+      <div class="nine columns left">
+        <a href="/">Home</a>
+        
+          
+          <a href="/Works" class="ml">Works</a>
+          
+        
+          
+          <a href="/About" class="ml">About</a>
+          
+        
+        
+          
+            <a href="mailto:test@test.test" target="_blank" class="ml">Email</a>
+          
+        
+      </div>
+    </div>
+    <hr style="margin-bottom: 2.6rem">
+  </div>
+</div>
+
+        <div class="trans">
+          <div class="row">
+  <div class="column">
+    <!-- Main information, edit it on theme/_config.yml -->
+    <h2 class="mb-2">I am Adi Sakti Jrs</h2>
+    <p>A student and web developer from Indonesia 🇮🇩</p>
+    <p>This is Minima, an undoubtedly simple and lightweight dark/light mode theme for Hexo. I created this from scratch using Skeleton CSS boilerplate. It only uses CSS and Vanilla JS, without using unnecessary third-party &#39;render-blocking&#39; libraries! 😁</p>
+  </div>
+</div>
+
+<h3>Recent Posts</h3>
+
+
+<div class="row">
+
+  <div class="three columns left lit">
+    <p class="bottom">2023年2月21日</p>
+  </div>
+  <div class="nine columns left mb-3">
+    <a href="/2023/02/21/stata/" >
+      
+        stata
+      
     </a>
   </div>
+</div>
 
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
+<div class="row">
+
+  <div class="three columns left lit">
+    <p class="bottom">2023年2月21日</p>
+  </div>
+  <div class="nine columns left mb-3">
+    <a href="/2023/02/21/Stata%20%E7%BB%98%E5%9B%BE%EF%BC%9A%E7%8E%AF%E5%BD%A2%E6%9F%B1%E7%8A%B6%E5%9B%BE/" >
+      
+        blog2
+      
+    </a>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="three columns left lit">
+    <p class="bottom">2023年2月21日</p>
+  </div>
+  <div class="nine columns left mb-3">
+    <a href="/2023/02/21/hello-world/" >
+      
+        Hello World
+      
+    </a>
   </div>
 </div>
 
 
+<h4> <a href="/archives">All Posts</a></h4>
 
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-  </ul>
-</nav>
-
-
-
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
+        </div>
+        <div class="row mt-2">
+  <h3>Search</h3>
+  <div><input id="search-text" title="search" class="search-text" type="text" placeholder="search......"></div>
+  <div style="margin-top: 1.5rem;">
+    <ul id="result"></ul>
   </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/21/stata/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="FanFan">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="FanFan's Workspace">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/21/stata/" class="post-title-link" itemprop="url">stata</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-02-21 18:42:01 / 修改时间：18:42:31" itemprop="dateCreated datePublished" datetime="2023-02-21T18:42:01+08:00">2023-02-21</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Stata-绘图：环形柱状图"><a href="#Stata-绘图：环形柱状图" class="headerlink" title="Stata 绘图：环形柱状图"></a>Stata 绘图：环形柱状图</h1><p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/Lianxh_%E8%A3%85%E9%A5%B0%E9%BB%84%E7%BA%BF.png"></p>
-<p>&amp;emsp;</p>
-<blockquote>
-<p><strong>作者：</strong> 范思妤 (南京大学)<br><strong>邮箱：</strong> <a href="mailto:&#102;&#97;&#x6e;&#x73;&#105;&#x79;&#x75;&#64;&#x73;&#x6d;&#97;&#x69;&#108;&#46;&#110;&#106;&#x75;&#x2e;&#x65;&#100;&#117;&#x2e;&#x63;&#110;">&#102;&#97;&#x6e;&#x73;&#105;&#x79;&#x75;&#64;&#x73;&#x6d;&#97;&#x69;&#108;&#46;&#110;&#106;&#x75;&#x2e;&#x65;&#100;&#117;&#x2e;&#x63;&#110;</a> </p>
-</blockquote>
-<p>&amp;emsp;</p>
-<blockquote>
-<p><strong>致谢：</strong> 本文摘自以下文章，特此感谢！<br><strong>Source：</strong> Asjad Naqvi, 2022, Blog, <a target="_blank" rel="noopener" href="https://medium.com/the-stata-guide/stata-graphs-circular-bar-graphs-8180ea783826">Stata graphs: Circular bar graphs</a></p>
-</blockquote>
-<h2 id="amp-emsp"><a href="#amp-emsp" class="headerlink" title="&amp;emsp;"></a>&amp;emsp;</h2><p><strong>目录</strong><br>[TOC]</p>
-<hr>
-<p>&amp;emsp;</p>
-<h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>说起柱状图大家并不陌生，但如果柱状图需要展示的项目过多而无法在一条直线上进行有效地平铺展示时，环形柱状图就不失为一种简洁美观展示数据特征的手段。环形柱状图是指每个条形都沿圆而不是直线显示的图形。</p>
-<p>环形柱状图没有y轴显示，因而样本对应的数值写在每个条形上，也可以在与图表的交互中表示。总的来说，环形柱状图因其可视化效果而颇受欢迎，但需要谨慎使用，因为群体不共享相同的y轴。</p>
-<p>基于<a target="_blank" rel="noopener" href="https://ourworldindata.org/coronavirus">Our World in Data</a>提供的新型冠状病毒数据集，本文将详细解析以下环形柱状图的编绘过程，来帮助读者了解使用 Stata 编绘环形柱状图的基本步骤和实操代码。</p>
-<p>建议读者使用 Stata15 及以上版本进行本文的操作。</p>
-<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_%E7%8E%AF%E5%BD%A2%E6%9F%B1%E7%8A%B6%E5%9B%BE_Fig01.png"></p>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>在进行正式绘图前，我们需要设定以下项目，进行准备工作。</p>
-<p>首先安装如下命令，并进行相关设置</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ssc</span> install schemepack, <span class="keyword">replace</span></span><br><span class="line"><span class="keyword">set</span> scheme white_tableau       <span class="comment">//将背景设置为简洁的白色</span></span><br></pre></td></tr></table></figure>
-<p>安装调色板工具<code>palettes</code>，命令详情可以参见连享会往期推文：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/eJ0uA1o0zfj_r1wiMXXPIw">Stata绘图：自定义绘图利器-palettes</a></p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ssc</span> install palettes, <span class="keyword">replace</span></span><br><span class="line"><span class="keyword">ssc</span> install colrspace, <span class="keyword">replace</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//将默认图形字体设置为 Arial Narrow</span></span><br><span class="line"><span class="keyword">graph</span> <span class="keyword">set</span> <span class="keyword">window</span> fontface <span class="string">&quot;Arial Narrow&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h2><p>我们首先需要从<a target="_blank" rel="noopener" href="https://ourworldindata.org/coronavirus">Our World in Data</a>提供的新型冠状病毒数据集中读入数据，对数据进行简单的清洗，并转化成dta格式。</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//从网络读入数据</span></span><br><span class="line">import delim using <span class="string">&quot;https://covid.ourworldindata.org/data/owid-covid-data.csv&quot;</span>, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">gen</span> date2 = <span class="built_in">date</span>(date, <span class="string">&quot;YMD&quot;</span>)</span><br><span class="line"><span class="keyword">format</span> date2 %tdDD-Mon-yy</span><br><span class="line"><span class="keyword">drop</span> date</span><br><span class="line"><span class="keyword">ren</span> date2 date</span><br><span class="line"><span class="keyword">gen</span> date2 = date</span><br><span class="line"><span class="keyword">order</span> date date2</span><br><span class="line"><span class="keyword">keep</span> date continent location new_* <span class="keyword">total</span>*</span><br><span class="line"></span><br><span class="line"><span class="comment">// 对数据进行清洗</span></span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">if</span> continent==<span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">replace</span> location = <span class="string">&quot;Bonaire Sint Eustatius&quot;</span> <span class="keyword">if</span> location ==<span class="string">&quot;Bonaire Sint Eustatius and Saba&quot;</span></span><br><span class="line"><span class="keyword">replace</span> location = <span class="string">&quot;Bosnia &amp; Herzeg.&quot;</span> <span class="keyword">if</span> location ==<span class="string">&quot;Bosnia and Herzegovina&quot;</span></span><br><span class="line"><span class="keyword">replace</span> location = <span class="string">&quot;Turks &amp; Caicos Is.&quot;</span> <span class="keyword">if</span> location ==<span class="string">&quot;Turks and Caicos Islands&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">compress</span>  </span><br><span class="line"><span class="keyword">save</span> owid.dta, <span class="keyword">replace</span></span><br></pre></td></tr></table></figure>
-
-<p>生成我们需要的变量。其中，变量<strong>newcases</strong>为某国家（地区）过去 7 日内新增确诊病例数，变量<strong>newdeaths</strong>为某国家（地区）过去 7 日内新增死亡病例数。</p>
-<p><strong>newcases_100k</strong>和<strong>newdeaths_100k</strong>为对应的标准化后（每百万人口）的变量。</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> owid.dta, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">sort</span> continent location date</span><br><span class="line"><span class="keyword">by</span> continent location: <span class="keyword">gen</span> double newcases  = total_cases  - total_cases[_n-7]</span><br><span class="line"><span class="keyword">by</span> continent location: <span class="keyword">gen</span> double newdeaths = total_deaths - total_deaths[_n-7]</span><br><span class="line"><span class="keyword">by</span> continent location: <span class="keyword">gen</span> double newcases_100k  = total_cases_per_million  - total_cases_per_million[_n-7]</span><br><span class="line"><span class="keyword">by</span> continent location: <span class="keyword">gen</span> double newdeaths_100k = total_deaths_per_million - total_deaths_per_million[_n-7]</span><br></pre></td></tr></table></figure>
-
-<p>由于一张图中只绘制一个时间点，因此我们只保留数据集中最近的日期：</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">summ</span> date</span><br><span class="line"><span class="keyword">keep</span> <span class="keyword">if</span> date == `<span class="built_in">r</span>(max)&#x27; - 1 </span><br><span class="line"><span class="keyword">keep</span> date continent location newcases* newdeaths*</span><br></pre></td></tr></table></figure>
-
-<p>我们通过去除空值来进一步缩小我们的样本，以最大化利用环形上的空间。我们删除过去7天的新增死亡病例为零值的样本：</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">if</span> newdeaths_100k &lt; 1</span><br></pre></td></tr></table></figure>
-
-<p>我们按照大洲分组，再按照标准化后的过去 7 日内新增死亡病例数升序排列：</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sort</span> continent newdeaths_100k</span><br></pre></td></tr></table></figure>
-
-<h2 id="绘制基础环形柱状图"><a href="#绘制基础环形柱状图" class="headerlink" title="绘制基础环形柱状图"></a>绘制基础环形柱状图</h2><p>我们通过以下操作为每一个样本在圆上分配一个位置，即某一样本在圆上对应的角度。其中<code>2 * _pi</code>代表360度的圆形，而<code>_n / _N</code>代表某一样本在全样本中所占位置。</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cap</span> <span class="keyword">drop</span> angle</span><br><span class="line"><span class="keyword">gen</span> double angle = _n * 2 * _pi / _N </span><br></pre></td></tr></table></figure>
-
-<p>在确定了角度以后，我们需要生成两组点。第一组表示圆上的一个点，第二组表示圆上该点的高度。</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">summ</span> newdeaths_100k, <span class="keyword">d</span></span><br><span class="line"><span class="keyword">global</span> circ = `<span class="built_in">r</span>(p99)&#x27;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 圆上的点</span></span><br><span class="line"><span class="keyword">gen</span> double xcir = (<span class="variable">$circ</span> * <span class="built_in">cos</span>(angle))</span><br><span class="line"><span class="keyword">gen</span> double ycir = (<span class="variable">$circ</span> * <span class="built_in">sin</span>(angle))</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/21/Stata%20%E7%BB%98%E5%9B%BE%EF%BC%9A%E7%8E%AF%E5%BD%A2%E6%9F%B1%E7%8A%B6%E5%9B%BE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="FanFan">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="FanFan's Workspace">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/21/Stata%20%E7%BB%98%E5%9B%BE%EF%BC%9A%E7%8E%AF%E5%BD%A2%E6%9F%B1%E7%8A%B6%E5%9B%BE/" class="post-title-link" itemprop="url">blog2</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2023-02-21 18:39:24 / 修改时间：18:39:53" itemprop="dateCreated datePublished" datetime="2023-02-21T18:39:24+08:00">2023-02-21</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Stata-绘图：环形柱状图"><a href="#Stata-绘图：环形柱状图" class="headerlink" title="Stata 绘图：环形柱状图"></a>Stata 绘图：环形柱状图</h1><p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/Lianxh_%E8%A3%85%E9%A5%B0%E9%BB%84%E7%BA%BF.png"></p>
-<p>&amp;emsp;</p>
-<blockquote>
-<p><strong>作者：</strong> 范思妤 (南京大学)<br><strong>邮箱：</strong> <a href="mailto:&#x66;&#97;&#110;&#115;&#105;&#x79;&#x75;&#64;&#115;&#109;&#97;&#105;&#108;&#46;&#x6e;&#x6a;&#x75;&#46;&#101;&#100;&#x75;&#x2e;&#x63;&#110;">&#x66;&#97;&#110;&#115;&#105;&#x79;&#x75;&#64;&#115;&#109;&#97;&#105;&#108;&#46;&#x6e;&#x6a;&#x75;&#46;&#101;&#100;&#x75;&#x2e;&#x63;&#110;</a> </p>
-</blockquote>
-<p>&amp;emsp;</p>
-<blockquote>
-<p><strong>致谢：</strong> 本文摘自以下文章，特此感谢！<br><strong>Source：</strong> Asjad Naqvi, 2022, Blog, <a target="_blank" rel="noopener" href="https://medium.com/the-stata-guide/stata-graphs-circular-bar-graphs-8180ea783826">Stata graphs: Circular bar graphs</a></p>
-</blockquote>
-<h2 id="amp-emsp"><a href="#amp-emsp" class="headerlink" title="&amp;emsp;"></a>&amp;emsp;</h2><p><strong>目录</strong><br>[TOC]</p>
-<hr>
-<p>&amp;emsp;</p>
-<h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>说起柱状图大家并不陌生，但如果柱状图需要展示的项目过多而无法在一条直线上进行有效地平铺展示时，环形柱状图就不失为一种简洁美观展示数据特征的手段。环形柱状图是指每个条形都沿圆而不是直线显示的图形。</p>
-<p>环形柱状图没有y轴显示，因而样本对应的数值写在每个条形上，也可以在与图表的交互中表示。总的来说，环形柱状图因其可视化效果而颇受欢迎，但需要谨慎使用，因为群体不共享相同的y轴。</p>
-<p>基于<a target="_blank" rel="noopener" href="https://ourworldindata.org/coronavirus">Our World in Data</a>提供的新型冠状病毒数据集，本文将详细解析以下环形柱状图的编绘过程，来帮助读者了解使用 Stata 编绘环形柱状图的基本步骤和实操代码。</p>
-<p>建议读者使用 Stata15 及以上版本进行本文的操作。</p>
-<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_%E7%8E%AF%E5%BD%A2%E6%9F%B1%E7%8A%B6%E5%9B%BE_Fig01.png"></p>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>在进行正式绘图前，我们需要设定以下项目，进行准备工作。</p>
-<p>首先安装如下命令，并进行相关设置</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ssc</span> install schemepack, <span class="keyword">replace</span></span><br><span class="line"><span class="keyword">set</span> scheme white_tableau       <span class="comment">//将背景设置为简洁的白色</span></span><br></pre></td></tr></table></figure>
-<p>安装调色板工具<code>palettes</code>，命令详情可以参见连享会往期推文：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/eJ0uA1o0zfj_r1wiMXXPIw">Stata绘图：自定义绘图利器-palettes</a></p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ssc</span> install palettes, <span class="keyword">replace</span></span><br><span class="line"><span class="keyword">ssc</span> install colrspace, <span class="keyword">replace</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//将默认图形字体设置为 Arial Narrow</span></span><br><span class="line"><span class="keyword">graph</span> <span class="keyword">set</span> <span class="keyword">window</span> fontface <span class="string">&quot;Arial Narrow&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a>获取数据</h2><p>我们首先需要从<a target="_blank" rel="noopener" href="https://ourworldindata.org/coronavirus">Our World in Data</a>提供的新型冠状病毒数据集中读入数据，对数据进行简单的清洗，并转化成dta格式。</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//从网络读入数据</span></span><br><span class="line">import delim using <span class="string">&quot;https://covid.ourworldindata.org/data/owid-covid-data.csv&quot;</span>, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">gen</span> date2 = <span class="built_in">date</span>(date, <span class="string">&quot;YMD&quot;</span>)</span><br><span class="line"><span class="keyword">format</span> date2 %tdDD-Mon-yy</span><br><span class="line"><span class="keyword">drop</span> date</span><br><span class="line"><span class="keyword">ren</span> date2 date</span><br><span class="line"><span class="keyword">gen</span> date2 = date</span><br><span class="line"><span class="keyword">order</span> date date2</span><br><span class="line"><span class="keyword">keep</span> date continent location new_* <span class="keyword">total</span>*</span><br><span class="line"></span><br><span class="line"><span class="comment">// 对数据进行清洗</span></span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">if</span> continent==<span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">replace</span> location = <span class="string">&quot;Bonaire Sint Eustatius&quot;</span> <span class="keyword">if</span> location ==<span class="string">&quot;Bonaire Sint Eustatius and Saba&quot;</span></span><br><span class="line"><span class="keyword">replace</span> location = <span class="string">&quot;Bosnia &amp; Herzeg.&quot;</span> <span class="keyword">if</span> location ==<span class="string">&quot;Bosnia and Herzegovina&quot;</span></span><br><span class="line"><span class="keyword">replace</span> location = <span class="string">&quot;Turks &amp; Caicos Is.&quot;</span> <span class="keyword">if</span> location ==<span class="string">&quot;Turks and Caicos Islands&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">compress</span>  </span><br><span class="line"><span class="keyword">save</span> owid.dta, <span class="keyword">replace</span></span><br></pre></td></tr></table></figure>
-
-<p>生成我们需要的变量。其中，变量<strong>newcases</strong>为某国家（地区）过去 7 日内新增确诊病例数，变量<strong>newdeaths</strong>为某国家（地区）过去 7 日内新增死亡病例数。</p>
-<p><strong>newcases_100k</strong>和<strong>newdeaths_100k</strong>为对应的标准化后（每百万人口）的变量。</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> owid.dta, <span class="keyword">clear</span></span><br><span class="line"><span class="keyword">sort</span> continent location date</span><br><span class="line"><span class="keyword">by</span> continent location: <span class="keyword">gen</span> double newcases  = total_cases  - total_cases[_n-7]</span><br><span class="line"><span class="keyword">by</span> continent location: <span class="keyword">gen</span> double newdeaths = total_deaths - total_deaths[_n-7]</span><br><span class="line"><span class="keyword">by</span> continent location: <span class="keyword">gen</span> double newcases_100k  = total_cases_per_million  - total_cases_per_million[_n-7]</span><br><span class="line"><span class="keyword">by</span> continent location: <span class="keyword">gen</span> double newdeaths_100k = total_deaths_per_million - total_deaths_per_million[_n-7]</span><br></pre></td></tr></table></figure>
-
-<p>由于一张图中只绘制一个时间点，因此我们只保留数据集中最近的日期：</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">summ</span> date</span><br><span class="line"><span class="keyword">keep</span> <span class="keyword">if</span> date == `<span class="built_in">r</span>(max)&#x27; - 1 </span><br><span class="line"><span class="keyword">keep</span> date continent location newcases* newdeaths*</span><br></pre></td></tr></table></figure>
-
-<p>我们通过去除空值来进一步缩小我们的样本，以最大化利用环形上的空间。我们删除过去7天的新增死亡病例为零值的样本：</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">if</span> newdeaths_100k &lt; 1</span><br></pre></td></tr></table></figure>
-
-<p>我们按照大洲分组，再按照标准化后的过去 7 日内新增死亡病例数升序排列：</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">sort</span> continent newdeaths_100k</span><br></pre></td></tr></table></figure>
-
-<h2 id="绘制基础环形柱状图"><a href="#绘制基础环形柱状图" class="headerlink" title="绘制基础环形柱状图"></a>绘制基础环形柱状图</h2><p>我们通过以下操作为每一个样本在圆上分配一个位置，即某一样本在圆上对应的角度。其中<code>2 * _pi</code>代表360度的圆形，而<code>_n / _N</code>代表某一样本在全样本中所占位置。</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cap</span> <span class="keyword">drop</span> angle</span><br><span class="line"><span class="keyword">gen</span> double angle = _n * 2 * _pi / _N </span><br></pre></td></tr></table></figure>
-
-<p>在确定了角度以后，我们需要生成两组点。第一组表示圆上的一个点，第二组表示圆上该点的高度。</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">summ</span> newdeaths_100k, <span class="keyword">d</span></span><br><span class="line"><span class="keyword">global</span> circ = `<span class="built_in">r</span>(p99)&#x27;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 圆上的点</span></span><br><span class="line"><span class="keyword">gen</span> double xcir = (<span class="variable">$circ</span> * <span class="built_in">cos</span>(angle))</span><br><span class="line"><span class="keyword">gen</span> double ycir = (<span class="variable">$circ</span> * <span class="built_in">sin</span>(angle))</span><br><span class="line"></span><br><span class="line"><span class="comment">// 圆上该点的高度</span></span><br><span class="line"><span class="keyword">gen</span> double xval = ((newdeaths_100k + <span class="variable">$circ</span> ) * <span class="built_in">cos</span>(angle)) </span><br><span class="line"><span class="keyword">gen</span> double yval = ((newdeaths_100k + <span class="variable">$circ</span> ) * <span class="built_in">sin</span>(angle))</span><br><span class="line"></span><br><span class="line"><span class="comment">//绘制对应散点图</span></span><br><span class="line"><span class="keyword">twoway</span> <span class="comment">/// </span></span><br><span class="line">(<span class="keyword">scatter</span> yval xval) <span class="comment">/// </span></span><br><span class="line">(<span class="keyword">scatter</span> ycir xcir) <span class="comment">/// </span></span><br><span class="line">  , aspect(1) legend(off)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_%E7%8E%AF%E5%BD%A2%E6%9F%B1%E7%8A%B6%E5%9B%BE_Fig02.png"></p>
-<p>我们将散点图的散点绘转换成柱状图的条柱，环形柱状图就已经具备了基础的“骨骼”。</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">twoway</span> <span class="comment">///</span></span><br><span class="line"> (pcspike yval xval ycir xcir, lw(0.6)) <span class="comment">///  </span></span><br><span class="line"> , aspect(1) legend(off)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_%E7%8E%AF%E5%BD%A2%E6%9F%B1%E7%8A%B6%E5%9B%BE_Fig03.png"></p>
-<p>虽然我们的图形已经初现雏形，但还存在以下瑕疵：</p>
-<ul>
-<li>坐标轴的范围不一样。由于我们不知道条柱的尖峰会出现在圆上的哪个位置，我们需要确保两个轴上的最小值和最大值是完全相同的数字。换句话说，我们需要以原点 (0,0) 为圆心，并确保图形的范围是完全的正方形。</li>
-<li>我们需要为数据标签预留一些空间。</li>
-</ul>
-<p>对此，我们进行如下调整：</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">summ</span> xval</span><br><span class="line"> <span class="keyword">local</span> xmax = `<span class="built_in">r</span>(max)&#x27;</span><br><span class="line"> <span class="keyword">local</span> xmin = `<span class="built_in">r</span>(min)&#x27;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">summ</span> yval</span><br><span class="line"> <span class="keyword">local</span> ymax = `<span class="built_in">r</span>(max)&#x27;</span><br><span class="line"> <span class="keyword">local</span> ymin = `<span class="built_in">r</span>(min)&#x27;</span><br><span class="line"><span class="keyword">global</span> edge = <span class="built_in">max</span>(<span class="symbol">`xmax&#x27;</span>,<span class="symbol">`ymax&#x27;</span>, <span class="built_in">abs</span>(<span class="symbol">`xmin&#x27;</span>), <span class="built_in">abs</span>(<span class="symbol">`ymin&#x27;</span>)) * 1.1</span><br><span class="line"></span><br><span class="line"><span class="keyword">twoway</span> <span class="comment">///</span></span><br><span class="line"> (pcspike yval xval ycir xcir, lw(0.5) ) <span class="comment">///  </span></span><br><span class="line">  , <span class="comment">///</span></span><br><span class="line">  xlabel(-<span class="variable">$edge</span> <span class="variable">$edge</span>) <span class="comment">///</span></span><br><span class="line">  ylabel(-<span class="variable">$edge</span> <span class="variable">$edge</span>) <span class="comment">///</span></span><br><span class="line">  aspect(1)</span><br></pre></td></tr></table></figure>
-
-<p>经过调整后，我们的环形柱状图变成了如下的样子：</p>
-<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_%E7%8E%AF%E5%BD%A2%E6%9F%B1%E7%8A%B6%E5%9B%BE_Fig04.png"></p>
-<p>接下来，我们为不同大洲分配不同样色：</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 为不同大洲分配不同样色</span></span><br><span class="line"><span class="keyword">local</span> cont</span><br><span class="line"><span class="keyword">local</span> i</span><br><span class="line"><span class="keyword">levelsof</span> continent, <span class="keyword">local</span>(lvls)  </span><br><span class="line"><span class="keyword">local</span> items = `<span class="built_in">r</span>(r)&#x27;</span><br><span class="line"><span class="keyword">local</span> i = 1</span><br><span class="line"><span class="keyword">foreach</span> x of <span class="keyword">local</span> lvls &#123;</span><br><span class="line"> colorpalette w3, <span class="keyword">n</span>(<span class="string">&quot;`items&#x27;&quot;</span>) nograph</span><br><span class="line"> </span><br><span class="line"> <span class="keyword">local</span> cont <span class="symbol">`cont&#x27;</span> (pcspike yval xval ycir xcir <span class="keyword">if</span> continent==<span class="string">&quot;`x&#x27;&quot;</span>, lc(<span class="string">&quot;`r(p`i&#x27;)&#x27;&quot;</span>) lw(0.5)) ||  </span><br><span class="line"> <span class="keyword">local</span> ++i</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">twoway</span> <span class="comment">///</span></span><br><span class="line"> <span class="symbol">`cont&#x27;</span> <span class="comment">///  </span></span><br><span class="line">  , <span class="comment">///</span></span><br><span class="line">  xlabel(-<span class="variable">$edge</span> <span class="variable">$edge</span>) <span class="comment">///</span></span><br><span class="line">  ylabel(-<span class="variable">$edge</span> <span class="variable">$edge</span>) <span class="comment">///</span></span><br><span class="line">  aspect(1) legend(off)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_%E7%8E%AF%E5%BD%A2%E6%9F%B1%E7%8A%B6%E5%9B%BE_Fig05.png"></p>
-<h2 id="国家-x2F-地区标签"><a href="#国家-x2F-地区标签" class="headerlink" title="国家&#x2F;地区标签"></a>国家&#x2F;地区标签</h2><p>在绘制好环形柱状图的基本框架以后，我们需要为每一样本添加对应的国家安全&#x2F;地区标签，标签和样本之间应当保持一定距离，我们将偏移距离设置为 30% 。</p>
-<p>此外，为了让标签更加简洁美观，我们需要进行如下处理：</p>
-<ul>
-<li>首先，我们对样本值进行四舍五入以避免显示太多信息</li>
-<li>其次，我们仅将标签限制在那些值为 10 或更高的国家&#x2F;地区，避免将所有国家&#x2F;地区的标签堆叠挤压在一起</li>
-</ul>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//设置标签所在位置</span></span><br><span class="line"><span class="keyword">cap</span> <span class="keyword">drop</span> xlab ylab</span><br><span class="line"><span class="keyword">gen</span> xlab = ((newdeaths_100k + <span class="variable">$circ</span> * 1.3) * <span class="built_in">cos</span>(angle)) </span><br><span class="line"><span class="keyword">gen</span> ylab = ((newdeaths_100k + <span class="variable">$circ</span> * 1.3) * <span class="built_in">sin</span>(angle))</span><br><span class="line"></span><br><span class="line"><span class="comment">//让标签更加简洁美观</span></span><br><span class="line"><span class="keyword">cap</span> <span class="keyword">drop</span> mylab </span><br><span class="line"><span class="keyword">gen</span> mylab = location + <span class="string">&quot; (&quot;</span> + <span class="built_in">string</span>(newdeaths_100k, <span class="string">&quot;%8.0f&quot;</span>) + <span class="string">&quot;)&quot;</span> <span class="keyword">if</span> newdeaths_100k &gt;= 10</span><br><span class="line"></span><br><span class="line"><span class="comment">//绘图</span></span><br><span class="line"><span class="keyword">twoway</span> <span class="comment">/// </span></span><br><span class="line">(pcspike yval xval ycir xcir, lw(0.5) ) <span class="comment">///   </span></span><br><span class="line">(<span class="keyword">scatter</span> ylab xlab, mlab(mylab) mlabsize(1) mlabpos(0) ms(none) ) <span class="comment">/// </span></span><br><span class="line">  , <span class="comment">/// </span></span><br><span class="line">  xlabel( -<span class="variable">$edge</span> <span class="variable">$edge</span>) <span class="comment">/// </span></span><br><span class="line">  ylabel(-<span class="variable">$edge</span> <span class="variable">$edge</span>) <span class="comment">/// </span></span><br><span class="line">  aspect(1) legend(off)</span><br></pre></td></tr></table></figure>
-<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_%E7%8E%AF%E5%BD%A2%E6%9F%B1%E7%8A%B6%E5%9B%BE_Fig06.png"></p>
-<p>可以看到，由于所有的标签都是水平方向，所以标签有所重叠，我们需要根据标签所处的位置在不同方向上旋转标签。</p>
-<p>具体地，我们进行如下处理：</p>
-<ul>
-<li>将图像划分为四个象限</li>
-<li>不同象限的标签旋转不同角度</li>
-</ul>
-<p>对应命令如下：</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//我们首先按如下方式分配象限</span></span><br><span class="line"><span class="keyword">cap</span> <span class="keyword">drop</span> quad</span><br><span class="line"><span class="keyword">gen</span> quad = .  <span class="comment">// quadrants</span></span><br><span class="line"> <span class="keyword">replace</span> quad = 1 <span class="keyword">if</span> xcir &gt;= 0 &amp; ycir &gt;= 0 </span><br><span class="line"> <span class="keyword">replace</span> quad = 2 <span class="keyword">if</span> xcir &lt;= 0 &amp; ycir &gt;= 0   </span><br><span class="line"> <span class="keyword">replace</span> quad = 3 <span class="keyword">if</span> xcir &lt;= 0 &amp; ycir &lt;= 0</span><br><span class="line"> <span class="keyword">replace</span> quad = 4 <span class="keyword">if</span> xcir &gt;= 0 &amp; ycir &lt;= 0</span><br><span class="line"></span><br><span class="line"><span class="comment">//旋转对应象限的标签角度</span></span><br><span class="line"><span class="keyword">cap</span> <span class="keyword">drop</span> angle2 </span><br><span class="line"><span class="keyword">gen</span> double angle2 = .</span><br><span class="line"> <span class="keyword">replace</span> angle2 = (angle  * (180 / _pi)) - 180 <span class="keyword">if</span> angle &gt;  _pi &amp; !<span class="built_in">inlist</span>(quad,2,4)</span><br><span class="line"> <span class="keyword">replace</span> angle2 = (angle  * (180 / _pi))       <span class="keyword">if</span> angle &lt;= _pi &amp; !<span class="built_in">inlist</span>(quad,2,4)</span><br><span class="line"> <span class="keyword">replace</span> angle2 = (angle  * (180 / _pi)) - 180 <span class="keyword">if</span> angle &lt;= _pi &amp; quad==2</span><br><span class="line"> <span class="keyword">replace</span> angle2 = (angle  * (180 / _pi))       <span class="keyword">if</span> angle &gt;  _pi &amp; quad==4</span><br></pre></td></tr></table></figure>
-
-<p>之后我们重新进行绘图</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 标签 </span></span><br><span class="line"><span class="keyword">local</span> labs2</span><br><span class="line"><span class="keyword">qui</span> <span class="keyword">levelsof</span> mylab , <span class="keyword">local</span>(lvls)  <span class="comment">//</span></span><br><span class="line"><span class="keyword">foreach</span> x of <span class="keyword">local</span> lvls &#123;</span><br><span class="line"> </span><br><span class="line"> <span class="keyword">qui</span> <span class="keyword">summ</span> angle2 <span class="keyword">if</span> mylab== <span class="string">&quot;`x&#x27;&quot;</span> </span><br><span class="line"> </span><br><span class="line"> <span class="keyword">local</span> labs2 <span class="symbol">`labs2&#x27;</span> (<span class="keyword">scatter</span> ylab xlab <span class="keyword">if</span> mylab== <span class="string">&quot;`x&#x27;&quot;</span>  , mc(none) mlabel(mylab) mlabangle(`<span class="built_in">r</span>(<span class="keyword">mean</span>)&#x27;)  mlabpos(0) mlabcolor() mlabsize(1))  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 大洲颜色</span></span><br><span class="line"><span class="keyword">local</span> cont</span><br><span class="line"><span class="keyword">local</span> i</span><br><span class="line"><span class="keyword">levelsof</span> continent, <span class="keyword">local</span>(lvls)  </span><br><span class="line"><span class="keyword">local</span> items = `<span class="built_in">r</span>(r)&#x27;</span><br><span class="line"><span class="keyword">local</span> i = 1</span><br><span class="line"><span class="keyword">foreach</span> x of <span class="keyword">local</span> lvls &#123;</span><br><span class="line"> </span><br><span class="line"> colorpalette w3, <span class="keyword">n</span>(<span class="string">&quot;`items&#x27;&quot;</span>) nograph</span><br><span class="line"> </span><br><span class="line"> <span class="keyword">local</span> cont <span class="symbol">`cont&#x27;</span> (pcspike yval xval ycir xcir <span class="keyword">if</span> continent==<span class="string">&quot;`x&#x27;&quot;</span>, lc(<span class="string">&quot;`r(p`i&#x27;)&#x27;&quot;</span>) lw(0.5)) ||  </span><br><span class="line"> <span class="keyword">local</span> ++i</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 绘图</span></span><br><span class="line"><span class="keyword">twoway</span> <span class="comment">///</span></span><br><span class="line"> <span class="symbol">`cont&#x27;</span> <span class="comment">///</span></span><br><span class="line"> <span class="symbol">`labs2&#x27;</span> <span class="comment">///</span></span><br><span class="line">  , <span class="comment">///</span></span><br><span class="line">  xlabel(-<span class="variable">$edge</span> <span class="variable">$edge</span>) <span class="comment">///</span></span><br><span class="line">  ylabel(-<span class="variable">$edge</span> <span class="variable">$edge</span>) <span class="comment">///</span></span><br><span class="line">  aspect(1) legend(off)</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_%E7%8E%AF%E5%BD%A2%E6%9F%B1%E7%8A%B6%E5%9B%BE_Fig07.png"></p>
-<h2 id="洲名标签"><a href="#洲名标签" class="headerlink" title="洲名标签"></a>洲名标签</h2><p>不同的颜色对应不同的大洲，我们需要在图片上添加洲名的标签。洲名的标签需要居中位于对应地区最大值和最小值之间。</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">cap</span> <span class="keyword">drop</span> tag</span><br><span class="line"><span class="keyword">egen</span> tag = tag(continent)</span><br><span class="line"><span class="keyword">recode</span> tag (0=.)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 生成变量</span></span><br><span class="line"><span class="keyword">cap</span> <span class="keyword">drop</span> *cont</span><br><span class="line"><span class="keyword">gen</span> double xcont     = .</span><br><span class="line"><span class="keyword">gen</span> double ycont     = .</span><br><span class="line"><span class="keyword">gen</span> double anglecont = .</span><br><span class="line"></span><br><span class="line"><span class="comment">// 生成角度</span></span><br><span class="line"><span class="keyword">levelsof</span> continent <span class="keyword">if</span> tag==1, <span class="keyword">local</span>(lvls)</span><br><span class="line"><span class="keyword">foreach</span> x of <span class="keyword">local</span> lvls &#123;</span><br><span class="line"><span class="keyword">qui</span> <span class="keyword">summ</span> angle <span class="keyword">if</span> continent== <span class="string">&quot;`x&#x27;&quot;</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">replace</span> anglecont = (`<span class="built_in">r</span>(max)&#x27; + `<span class="built_in">r</span>(min)&#x27;) / 2 <span class="keyword">if</span> tag==1 &amp; continent== <span class="string">&quot;`x&#x27;&quot;</span></span><br><span class="line"><span class="keyword">replace</span> xcont = (<span class="variable">$circ</span> * 0.9 * <span class="built_in">cos</span>(anglecont)) <span class="keyword">if</span> tag==1 &amp; continent== <span class="string">&quot;`x&#x27;&quot;</span></span><br><span class="line"><span class="keyword">replace</span> ycont = (<span class="variable">$circ</span> * 0.9 * <span class="built_in">sin</span>(anglecont)) <span class="keyword">if</span> tag==1 &amp; continent== <span class="string">&quot;`x&#x27;&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>上面代码中<code>0.9</code>是标签的位移值，这样它才不会和图形本身重叠。然后我们还需要将洲名的标签旋转90度，让它和圆弧相切：</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">replace</span> anglecont = (anglecont  * (180 / _pi)) - 90  <span class="keyword">if</span> tag==1</span><br></pre></td></tr></table></figure>
-<p>我们将洲名添加到绘图中</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">local</span> labcont</span><br><span class="line"><span class="keyword">levelsof</span> continent <span class="keyword">if</span> tag==1, <span class="keyword">local</span>(lvls)</span><br><span class="line"><span class="keyword">foreach</span> x of <span class="keyword">local</span> lvls &#123;</span><br><span class="line"> </span><br><span class="line"> <span class="keyword">summ</span> anglecont <span class="keyword">if</span> continent== <span class="string">&quot;`x&#x27;&quot;</span> &amp; tag==1, meanonly</span><br><span class="line"> </span><br><span class="line"> <span class="keyword">local</span> labcont <span class="symbol">`labcont&#x27;</span> (<span class="keyword">scatter</span> ycont xcont <span class="keyword">if</span> continent== <span class="string">&quot;`x&#x27;&quot;</span> &amp; tag==1, mc(none) mlabel(continent) mlabangle(`<span class="built_in">r</span>(<span class="keyword">mean</span>)&#x27;)  mlabpos(0) mlabcolor(black) mlabsize(1.8))  ||</span><br><span class="line"> </span><br><span class="line">&#125;  </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="keyword">twoway</span> <span class="comment">///</span></span><br><span class="line">  (pcspike yval xval ycir xcir, lw(0.5) ) <span class="comment">///  </span></span><br><span class="line"> <span class="symbol">`labcont&#x27;</span> <span class="comment">///</span></span><br><span class="line">  , <span class="comment">///</span></span><br><span class="line">  xlabel(-<span class="variable">$edge</span> <span class="variable">$edge</span>) <span class="comment">///</span></span><br><span class="line">  ylabel(-<span class="variable">$edge</span> <span class="variable">$edge</span>) <span class="comment">///</span></span><br><span class="line">  aspect(1)  legend(off)</span><br></pre></td></tr></table></figure>
-<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_%E7%8E%AF%E5%BD%A2%E6%9F%B1%E7%8A%B6%E5%9B%BE_Fig08.png"></p>
-<h2 id="完整绘图代码"><a href="#完整绘图代码" class="headerlink" title="完整绘图代码"></a>完整绘图代码</h2><p>最后，我们将所有以上代码进行汇总，绘制环形柱状图，并在圆形中心添加图名和绘图日期。</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">*************************</span></span><br><span class="line"><span class="comment">**       最终绘图       **</span></span><br><span class="line"><span class="comment">*************************</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 基础环形柱状图框架</span></span><br><span class="line"><span class="keyword">local</span> cont</span><br><span class="line"><span class="keyword">local</span> i</span><br><span class="line"><span class="keyword">levelsof</span> continent, <span class="keyword">local</span>(lvls)  </span><br><span class="line"><span class="keyword">local</span> items = `<span class="built_in">r</span>(r)&#x27;</span><br><span class="line"><span class="keyword">local</span> i = 1</span><br><span class="line"><span class="keyword">foreach</span> x of <span class="keyword">local</span> lvls &#123;</span><br><span class="line"> colorpalette w3, <span class="keyword">n</span>(<span class="string">&quot;`items&#x27;&quot;</span>) nograph</span><br><span class="line"> <span class="keyword">local</span> cont <span class="symbol">`cont&#x27;</span> (pcspike yval xval ycir xcir <span class="keyword">if</span> continent==<span class="string">&quot;`x&#x27;&quot;</span>, lc(<span class="string">&quot;`r(p`i&#x27;)&#x27;&quot;</span>) lw(0.5)) ||  </span><br><span class="line"> <span class="keyword">local</span> ++i</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 国家/地区标签</span></span><br><span class="line"><span class="keyword">local</span> labs2</span><br><span class="line"><span class="keyword">qui</span> <span class="keyword">levelsof</span> mylab , <span class="keyword">local</span>(lvls)  <span class="comment">//</span></span><br><span class="line"><span class="keyword">foreach</span> x of <span class="keyword">local</span> lvls &#123;</span><br><span class="line"> <span class="keyword">qui</span> <span class="keyword">summ</span> angle2 <span class="keyword">if</span> mylab== <span class="string">&quot;`x&#x27;&quot;</span> </span><br><span class="line"> <span class="keyword">local</span> labs2 <span class="symbol">`labs2&#x27;</span> (<span class="keyword">scatter</span> ylab xlab <span class="keyword">if</span> mylab== <span class="string">&quot;`x&#x27;&quot;</span>  , mc(none) mlabel(mylab) mlabangle(`<span class="built_in">r</span>(<span class="keyword">mean</span>)&#x27;)  mlabpos(0) mlabcolor() mlabsize(1))  </span><br><span class="line">&#125;   </span><br><span class="line">  </span><br><span class="line"><span class="comment">// 大洲标签</span></span><br><span class="line"><span class="keyword">local</span> labcont</span><br><span class="line"><span class="keyword">levelsof</span> continent <span class="keyword">if</span> tag==1, <span class="keyword">local</span>(lvls)</span><br><span class="line"><span class="keyword">foreach</span> x of <span class="keyword">local</span> lvls &#123;</span><br><span class="line"> <span class="keyword">qui</span> <span class="keyword">summ</span> anglecont <span class="keyword">if</span> continent== <span class="string">&quot;`x&#x27;&quot;</span> &amp; tag==1, meanonly</span><br><span class="line"> <span class="keyword">local</span> labcont <span class="symbol">`labcont&#x27;</span> (<span class="keyword">scatter</span> ycont xcont <span class="keyword">if</span> continent== <span class="string">&quot;`x&#x27;&quot;</span> &amp; tag==1, mc(none) mlabel(continent) mlabangle(`<span class="built_in">r</span>(<span class="keyword">mean</span>)&#x27;)  mlabpos(0) mlabcolor(black) mlabsize(1.2))  ||</span><br><span class="line"> </span><br><span class="line">&#125;   </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="comment">// 数据日期</span></span><br><span class="line"><span class="keyword">summ</span> date</span><br><span class="line"> <span class="keyword">local</span> date = <span class="built_in">r</span>(max)</span><br><span class="line"> <span class="keyword">local</span> date : <span class="keyword">di</span> %tdDD_Mon_yy <span class="symbol">`date&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 绘图</span></span><br><span class="line"><span class="keyword">twoway</span> <span class="comment">///</span></span><br><span class="line"> <span class="symbol">`cont&#x27;</span> <span class="comment">///</span></span><br><span class="line"> <span class="symbol">`labs2&#x27;</span> <span class="comment">///</span></span><br><span class="line"> <span class="symbol">`labcont&#x27;</span> <span class="comment">///</span></span><br><span class="line">  , <span class="comment">///</span></span><br><span class="line">  xlabel(-<span class="variable">$edge</span> <span class="variable">$edge</span>, nogrid) <span class="comment">///</span></span><br><span class="line">  ylabel(-<span class="variable">$edge</span> <span class="variable">$edge</span>, nogrid) <span class="comment">///</span></span><br><span class="line">  legend(off) <span class="comment">///</span></span><br><span class="line">  aspect(1) xsize(1) ysize(1) <span class="comment">///</span></span><br><span class="line">  yscale(off) xscale(off) <span class="comment">///</span></span><br><span class="line">  text( 15 0 <span class="string">&quot;&#123;fontface Merriweather Bold:COVID-19&#125;&quot;</span>, size(2.5) box just(center) margin(t+2 b+2) fcolor(none) lw(none) color()) <span class="comment">///</span></span><br><span class="line">  text(-10 0 <span class="string">&quot;deaths per one million pop&quot;</span> <span class="string">&quot;in the past 7 days&quot;</span>, size(1.5) box just(center) margin(t+2 b+2) fcolor(none) lw(none) color()) <span class="comment">///</span></span><br><span class="line">  text(-30 0 <span class="string">&quot;(`date&#x27;)&quot;</span>, size(1.1) box just(center) margin(t+2 b+2) fcolor(none) lw(none) color()) <span class="comment">///</span></span><br><span class="line">  <span class="keyword">note</span>(<span class="string">&quot;Source: Our World in Data. Countries with no reported deaths are dropped from the graph. Only countries with over 10 deaths are labeled.&quot;</span>, size(1.2))</span><br></pre></td></tr></table></figure>
-
-
-<p>我们得到了最终的全球多个国家&#x2F;地区过去7日内新增死亡病例（每百万人口）的环形柱状图：</p>
-<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_%E7%8E%AF%E5%BD%A2%E6%9F%B1%E7%8A%B6%E5%9B%BE_Fig01.png"></p>
-<p>以上就是本文分享的全部内容了。读者可以仔细探索环形柱状图的一些绘图技巧，熟稔于心，为研究中数据的图形可视化提供更多可能性！</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/21/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="FanFan">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="FanFan's Workspace">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023/02/21/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-02-21 17:50:26" itemprop="dateCreated datePublished" datetime="2023-02-21T17:50:26+08:00">2023-02-21</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">FanFan</p>
-  <div class="site-description" itemprop="description"></div>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">3</span>
-          <span class="site-state-item-name">日志</span>
+        <div class="row mt-2">
+  
+    <div class="eight columns">
+      <p id="madewith">Made with ❤ and
+        <a class="footer-link icon" href="https://hexo.io" target="_blank" style="text-decoration: none;" rel="noreferrer" aria-label="Hexo.io">
+        <svg class="hexo svg-hov" width="14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Hexo.js</title><path d="M12 .007L1.57 6.056V18.05L12 23.995l10.43-6.049V5.952L12 .007zm4.798 17.105l-.939.521-.939-.521V12.94H9.08v4.172l-.94.521-.938-.521V6.89l.939-.521.939.521v4.172h5.84V6.89l.94-.521.938.521v10.222z"/></svg>
         </a>
-      </div>
-  </nav>
+        
+        at <a href="https://en.wikipedia.org/wiki/Earth" target="_blank" rel="noreferrer">Earth</a>.</p>
+        
+    </div>
+
+    <!-- Sepcial thanks to https://simpleicons.org/ for the icons -->
+    <div class="four columns mb-3 posisi" >
+      
+      <a class="ml-0 footer-link icon" href="https://github.com/adisaktijrs" target="_blank" style="text-decoration: none" rel="noreferrer" aria-label="GitHub">
+        <svg class="github svg-hov" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </a>
+      
+
+      
+      <a class="ml-0 footer-link icon" href="https://linkedin.com/in/adisaktijrs" target="_blank" style="text-decoration: none" rel="noreferrer" aria-label="LinkedIn">
+        <svg class="linkedin svg-hov" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      
+
+      
+      <a class="ml-0 footer-link icon" href="https://twitter.com/adisaktijrs" target="_blank" style="text-decoration: none" rel="noreferrer" aria-label="Twitter">
+        <svg class="twitter svg-hov" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>
+      </a>
+      
+
+      
+      <a class="ml-0 footer-link icon" href="https://instagram.com/adisaktijrs" target="_blank" style="text-decoration: none" rel="noreferrer" aria-label="Instagram">
+        <svg class="instagram svg-hov" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+      </a>
+      
+
+      
+      <a class="ml-0 footer-link icon" href="https://stackoverflow.com/story/tobiasreithmeier" target="_blank" style="text-decoration: none" rel="noreferrer" aria-label="StackOverflow">
+        <svg class="stackoverflow svg-hov" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Stack Overflow</title><path d="M15.725 0l-1.72 1.277 6.39 8.588 1.716-1.277L15.725 0zm-3.94 3.418l-1.369 1.644 8.225 6.85 1.369-1.644-8.225-6.85zm-3.15 4.465l-.905 1.94 9.702 4.517.904-1.94-9.701-4.517zm-1.85 4.86l-.44 2.093 10.473 2.201.44-2.092-10.473-2.203zM1.89 15.47V24h19.19v-8.53h-2.133v6.397H4.021v-6.396H1.89zm4.265 2.133v2.13h10.66v-2.13H6.154Z"/></svg>
+      </a>
+      
+
+    </div>
+  
 </div>
-
-
 
       </div>
 
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
 
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2023</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">FanFan</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
   </div>
+  <script src="/js/nanobar.min.js"></script>
 
-        
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/muse.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
+  <script>
+    var options = {
+      classname: 'nanobar',
+      id: 'myNanobar'
+    };
+    var nanobar = new Nanobar(options);
+    nanobar.go(30);
+    nanobar.go(76);
+    nanobar.go(100);
+  </script>
 
 </body>
+
 </html>
