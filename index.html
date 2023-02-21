@@ -1,303 +1,694 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-  <!-- Minima -->
-  <!-- Hexo theme created by @adisaktijrs -->
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-
-  
-  <title>FanFan&#39;s Workspace</title>
-  
-  <link rel="canonical" href="http://example.com/">
-  
-  <meta name="description" content="">
-  
-  
-  <meta name="author" content="FanFan">
-  
-  
-  <meta property="og:image" content="http://example.com/images/thumbnail.jpg">
-  
-  
-  <meta property="og:site_name" content="FanFan&#39;s Workspace" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="FanFan&#39;s Workspace" />
-  
-  <meta property="og:description" content="">
-  
-  <meta property="og:url" content="http://example.com/" />
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="FanFan&#39;s Workspace">
-  
-  <meta name="twitter:description" content="">
-  
-  
-  
-  <meta name="twitter:image" content="http://example.com/images/thumbnail.jpg">
-  
-  
-  <meta name="twitter:url" content="http://example.com/" />
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Preload fonts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="preload" href="/fonts/dm-serif-display-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  
-<link rel="stylesheet" href="/css/normalize.css">
-
-  
-<link rel="stylesheet" href="/css/skeleton.css">
-
-  
-<link rel="stylesheet" href="/css/custom.css">
-
-  
-<link rel="stylesheet" href="/css/prism-dark.css">
-
-  
-<link rel="stylesheet" href="/css/prism-line-numbers.css">
-
-  <!-- User css -->
-  
-  
-<link rel="stylesheet" href="/css/user.css">
-
-  
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="/images/favicon2.png">
-
-  <!-- Custom Theme Color Style
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <style>
-  a:not(.icon) {
-    text-decoration-color: #0FA0CE;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 50%,
-      #0FA0CE 50%
-    );
-  }
-  blockquote {
-    border-left: 8px solid #0FA0CE;
-  }
-  .nanobar .bar {
-    background: #0FA0CE;
-  }
-  .button.button-primary:hover,
-  button.button-primary:hover,
-  input[type="submit"].button-primary:hover,
-  input[type="reset"].button-primary:hover,
-  input[type="button"].button-primary:hover,
-  .button.button-primary:focus,
-  button.button-primary:focus,
-  input[type="submit"].button-primary:focus,
-  input[type="reset"].button-primary:focus,
-  input[type="button"].button-primary:focus {
-    background-color: #0FA0CE;
-    border-color: #0FA0CE;
-  }
-  input[type="email"]:focus,
-  input[type="number"]:focus,
-  input[type="search"]:focus,
-  input[type="text"]:focus,
-  input[type="tel"]:focus,
-  input[type="url"]:focus,
-  input[type="password"]:focus,
-  textarea:focus,
-  select:focus {
-    border: 1px solid #0FA0CE;
-  }
-</style>
-
-  <!-- Google Analytics (With Privacy Settings On)
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  
-
-  
-  <script src="/js/pic.min.js" defer></script>
-  
-
-  
-
-<meta name="generator" content="Hexo 6.3.0"></head>
-
-<body>
-  <div class="container">
-    <div class="row">
-      <div>
-
-        <div class="row">
-  <div class="two columns" style="max-width: 50px">
-    <h1 class="mt-2 mode">
-      <div onclick=setDarkMode(true) id="darkBtn">🌑</div>
-      <div onclick=setDarkMode(false) id="lightBtn" class=hidden>☀️</div>
-      <script >
-        if (localStorage.getItem('preferredTheme') == 'dark') {
-          setDarkMode(true)
-        }
-        function setDarkMode(isDark) {
-          var darkBtn = document.getElementById('darkBtn')
-          var lightBtn = document.getElementById('lightBtn')
-          if (isDark) {
-            lightBtn.style.display = "block"
-            darkBtn.style.display = "none"
-            localStorage.setItem('preferredTheme', 'dark');
-          } else {
-            lightBtn.style.display = "none"
-            darkBtn.style.display = "block"
-            localStorage.removeItem('preferredTheme');
-          }
-          document.body.classList.toggle("darkmode");
-        }
-      </script>
-    </h1>
-  </div>
-
-  <div class="six columns ml-1">
-    <h1 class="mt-2">
-      FanFan&#39;s Workspace
-    </h1>
-  </div>
-
-  <div class="twelve columns">
-    <div class="row">
-      <div class="nine columns left">
-        <a href="/">Home</a>
-        
-          
-          <a href="/Works" class="ml">Data&Code</a>
-          
-        
-          
-          <a href="/About" class="ml">About</a>
-          
-        
-        
-          
-            <a href="mailto:siyufan7-c@my.cityu.edu.hk" target="_blank" class="ml">Email</a>
-          
-        
-      </div>
-    </div>
-    <hr style="margin-bottom: 2.6rem">
-  </div>
-</div>
-
-        <div class="trans">
-          <div class="row">
-  <div class="column">
-    <!-- Main information, edit it on theme/_config.yml -->
-    <h2 class="mb-2">I am Siyu Fan</h2>
-    <p>PhD candidate in Management Science and Engineering/Accounting </p>
-    <p>Nanjing University / City University of Hong Kong 😁</p>
-  </div>
-</div>
-
-<h3>Recent Posts</h3>
+<link rel="stylesheet" href="/css/main.css">
 
 
-<div class="row">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-  <div class="three columns left lit">
-    <p class="bottom">2023年2月21日</p>
-  </div>
-  <div class="nine columns left mb-3">
-    <a href="/2023/02/21/blog20230221_%E7%A7%91%E5%88%9B%E6%9D%BF%E7%88%AC%E8%99%AB/" >
-      
-        Python：基于selenium爬取科创板审核问询披露
-      
-    </a>
-  </div>
-</div>
-
-<div class="row">
-
-  <div class="three columns left lit">
-    <p class="bottom">2023年2月21日</p>
-  </div>
-  <div class="nine columns left mb-3">
-    <a href="/2023/02/21/hello-world/" >
-      
-        Hello World
-      
-    </a>
-  </div>
-</div>
-
-
-<h4> <a href="/archives">All Posts</a></h4>
-
-        </div>
-        <div class="row mt-2">
-  <h3>Search</h3>
-  <div><input id="search-text" title="search" class="search-text" type="text" placeholder="search......"></div>
-  <div style="margin-top: 1.5rem;">
-    <ul id="result"></ul>
-  </div>
-</div>
-        <div class="row mt-2">
-  
-    <div class="eight columns">
-      <p id="madewith">努力打破学术壁垒
-        <a class="footer-link icon" href="https://hexo.io" target="_blank" style="text-decoration: none;" rel="noreferrer" aria-label="Hexo.io">
-        <svg class="hexo svg-hov" width="14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Hexo.js</title><path d="M12 .007L1.57 6.056V18.05L12 23.995l10.43-6.049V5.952L12 .007zm4.798 17.105l-.939.521-.939-.521V12.94H9.08v4.172l-.94.521-.938-.521V6.89l.939-.521.939.521v4.172h5.84V6.89l.94-.521.938.521v10.222z"/></svg>
-        </a>
-        
-    </div>
-
-    <!-- Sepcial thanks to https://simpleicons.org/ for the icons -->
-    <div class="four columns mb-3 posisi" >
-      
-      <a class="ml-0 footer-link icon" href="https://github.com/beingfanfan" target="_blank" style="text-decoration: none" rel="noreferrer" aria-label="GitHub">
-        <svg class="github svg-hov" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-      </a>
-      
-
-      
-
-      
-
-      
-
-      
-
-    </div>
-  
-</div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <script src="/js/nanobar.min.js"></script>
-
-  <script>
-    var options = {
-      classname: 'nanobar',
-      id: 'myNanobar'
-    };
-    var nanobar = new Nanobar(options);
-    nanobar.go(30);
-    nanobar.go(76);
-    nanobar.go(100);
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-</body>
+  <meta property="og:type" content="website">
+<meta property="og:title" content="FanFan&#39;s Workspace">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="FanFan&#39;s Workspace">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="FanFan">
+<meta name="twitter:card" content="summary">
 
+<link rel="canonical" href="http://example.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>FanFan's Workspace</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">FanFan's Workspace</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/21/blog20230221_%E7%A7%91%E5%88%9B%E6%9D%BF%E7%88%AC%E8%99%AB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="FanFan">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FanFan's Workspace">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/02/21/blog20230221_%E7%A7%91%E5%88%9B%E6%9D%BF%E7%88%AC%E8%99%AB/" class="post-title-link" itemprop="url">Python：基于selenium爬取科创板审核问询披露</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-02-21 19:50:42" itemprop="dateCreated datePublished" datetime="2023-02-21T19:50:42+08:00">2023-02-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-02-22 00:37:48" itemprop="dateModified" datetime="2023-02-22T00:37:48+08:00">2023-02-22</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/Lianxh_%E8%A3%85%E9%A5%B0%E9%BB%84%E7%BA%BF.png"></p>
+<h2 id="1-科创板审核问询披露"><a href="#1-科创板审核问询披露" class="headerlink" title="1.科创板审核问询披露"></a>1.科创板审核问询披露</h2><p>科创板试点的注册制改革，强调 “以信息披露为核心”。为在发行上市审核坚持以信息披露为核心，把好上市企业入口质量关，上交所主要采用公开化问询式审核方式，即交易所提出问询的问题，发行人对这些问题进行回复和说明，中介机构对问询事项的核查过程和结论，以“一问一答”的方式及时向市场公开。</p>
+<p>文本重点关注如何通过Python的<code>*selenium*</code>库爬取上述审核问询流程披露的原始文件，并在发行公司层面对问询与回复情况进行汇总统计。</p>
+<h2 id="2-爬虫实战"><a href="#2-爬虫实战" class="headerlink" title="2.爬虫实战"></a>2.爬虫实战</h2><h3 id="2-1-安装selenium及浏览器驱动"><a href="#2-1-安装selenium及浏览器驱动" class="headerlink" title="2.1 安装selenium及浏览器驱动"></a>2.1 安装selenium及浏览器驱动</h3><p>本文中，我们使用Python中的<code>selenium</code>库对网页进行爬取。<code>selenium</code>通过创建模拟浏览器的方式进行爬取，可以完全模拟真实用户的动态操作。</p>
+<p>在配置好python环境后，打开命令提示符，并键入如下命令安装<code>selenium</code>库：</p>
+<pre class="line-numbers language-none"><code class="language-none">pip install selenium<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>或者使用国内镜像源安装<code>selenium</code>库：</p>
+<pre class="line-numbers language-none"><code class="language-none">pip install selenium -i http:&#x2F;&#x2F;pypi.douban.com&#x2F;simple&#x2F; --trusted-host  pypi.douban.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>接下来，我们需要安装浏览器驱动。此处我们主要讲解windows系统安装chrome浏览器驱动的步骤和方法。其他系统及其他浏览器驱动的安装，请自行网络搜索相关教程。</p>
+<p>首先，我们需要确定chrome浏览器版本。打开chrome浏览器，在新标签页输入 chrome:&#x2F;&#x2F;settings&#x2F;help 进入设置界面，查看目前的版本信息。</p>
+<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_Python%E7%88%AC%E5%8F%96%E7%A7%91%E5%88%9B%E6%9D%BF%E5%AE%A1%E6%A0%B8%E9%97%AE%E8%AF%A2%E6%8A%AB%E9%9C%B2%E6%96%87%E4%BB%B6_Fig1.png"></p>
+<p>在获取浏览器版本信息后，需下载对应版本的浏览器驱动。打开chrome浏览器驱动下载地址：<a target="_blank" rel="noopener" href="http://chromedriver.storage.googleapis.com/index.html">驱动下载地址</a>，找到和目前版本最接近的驱动，Windows系统用户需下载win32版本。</p>
+<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_Python%E7%88%AC%E5%8F%96%E7%A7%91%E5%88%9B%E6%9D%BF%E5%AE%A1%E6%A0%B8%E9%97%AE%E8%AF%A2%E6%8A%AB%E9%9C%B2%E6%96%87%E4%BB%B6_Fig2.png"></p>
+<p>解压驱动文件包得到<code>chromedriver.exe</code>，保存到指定路径，并务必将当前路径添加到环境变量中（我的电脑&gt;&gt;右键属性&gt;&gt;高级系统设置&gt;&gt;高级&gt;&gt;环境变量&gt;&gt;系统变量&gt;&gt;Path）。</p>
+<h3 id="2-2-浏览器驱动配置使用"><a href="#2-2-浏览器驱动配置使用" class="headerlink" title="2.2 浏览器驱动配置使用"></a>2.2 浏览器驱动配置使用</h3><p>我们使用如下代码创建浏览器驱动对象。此外，我们可以根据爬虫目标网页调整浏览器选项，提供稳定运行环境。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
+<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver <span class="token keyword">import</span> ChromeOptions
+
+CHROME_OPTIONS <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>ChromeOptions<span class="token punctuation">(</span><span class="token punctuation">)</span>
+prefs <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">"profile.managed_default_content_settings.images"</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">&#125;</span>   <span class="token comment"># 1代表显示图片，2代表不显示图片</span>
+CHROME_OPTIONS<span class="token punctuation">.</span>add_experimental_option<span class="token punctuation">(</span><span class="token string">"prefs"</span><span class="token punctuation">,</span> prefs<span class="token punctuation">)</span>
+CHROME_OPTIONS<span class="token punctuation">.</span>add_experimental_option<span class="token punctuation">(</span><span class="token string">"excludeSwitches"</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token string">"enable-automation"</span><span class="token punctuation">]</span><span class="token punctuation">)</span> 
+CHROME_OPTIONS<span class="token punctuation">.</span>add_experimental_option<span class="token punctuation">(</span><span class="token string">"useAutomationExtension"</span><span class="token punctuation">,</span> <span class="token boolean">False</span><span class="token punctuation">)</span>
+CHROME_OPTIONS<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">'--disable-blink-features=AutomationControlled'</span><span class="token punctuation">)</span>
+CHROME_DRIVER <span class="token operator">=</span> <span class="token string">r'D:/chromedriver/chromedriver.exe'</span>  <span class="token comment"># 此处为chromedriver.exe所在路径</span>
+
+<span class="token comment"># 声明浏览器</span>
+driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span>executable_path<span class="token operator">=</span>CHROME_DRIVER<span class="token punctuation">,</span> options<span class="token operator">=</span>CHROME_OPTIONS<span class="token punctuation">)</span>  
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-1-分析网页结构"><a href="#2-1-分析网页结构" class="headerlink" title="2.1 分析网页结构"></a>2.1 分析网页结构</h3><p>首先，我们需要浏览待爬取的页面结构，并检查网页确定网页类型。</p>
+<p>上交所科创板股票审核页面如下。最上方一行分类列示已递交申请的发行人的状态，我们的样本仅爬取已经有注册结果的发行人（即已经走完整个科创板审核问询流程）。</p>
+<p>所有发行人按照时间由近及远的顺序列示在页面表格中。每行发行人全称对应一个超链接，点击即进入发行人审核问询的详情页面。因此，我们整体的爬虫思路如下：</p>
+<ul>
+<li>获取全部发行人对应的链接列表</li>
+<li>遍历目标链接列表爬取某一页面的特定信息，并储存到本地。</li>
+</ul>
+<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_Python%E7%88%AC%E5%8F%96%E7%A7%91%E5%88%9B%E6%9D%BF%E5%AE%A1%E6%A0%B8%E9%97%AE%E8%AF%A2%E6%8A%AB%E9%9C%B2%E6%96%87%E4%BB%B6_Fig3.png"></p>
+<h3 id="2-2-获取url列表"><a href="#2-2-获取url列表" class="headerlink" title="2.2 获取url列表"></a>2.2 获取url列表</h3><p>如上所述，我们仅爬取已经有注册结果的发行人。因此，首先需要用selenium自动化模拟鼠标点击操作，以点击页面上方的“注册结果”，获取跳转后的页面上的信息。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 导入所需要的包</span>
+<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>common<span class="token punctuation">.</span>by <span class="token keyword">import</span> By
+<span class="token keyword">import</span> time
+
+<span class="token comment"># 请求页面</span>
+url <span class="token operator">=</span> <span class="token string">"http://kcb.sse.com.cn/renewal/"</span>
+driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>           
+
+<span class="token comment"># 通过Xpath定位到“注册结果”，并点击，等待页面加载</span>
+driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>XPATH<span class="token punctuation">,</span><span class="token string">'//*[@id="select5"]/a/span[2]'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>通过加载后的检查页面，我们发现url就包含在发行人全称的href属性中。我们进行如下步骤的操作以获取完整的发行人url列表：</p>
+<ul>
+<li>定位发行人全称，并提取元素的href属性值</li>
+<li>定位“下一页”按钮，模拟鼠标操作进行翻页</li>
+<li>重复以上两步，直至最后一页</li>
+</ul>
+<p>selenium提供了多种元素定位方式，如xpath，id，name等。在本文中，我们用Xpath定位元素。具体步骤如下图，得到对应元素的Xpath后，通过语法<code>@href</code>选取元素属性。</p>
+<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_Python%E7%88%AC%E5%8F%96%E7%A7%91%E5%88%9B%E6%9D%BF%E5%AE%A1%E6%A0%B8%E9%97%AE%E8%AF%A2%E6%8A%AB%E9%9C%B2%E6%96%87%E4%BB%B6_Fig4.png"></p>
+<p>代码如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">
+<span class="token comment"># Xpath定位元素</span>
+all_url_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+url_xpath <span class="token operator">=</span> <span class="token string">'//*[@id="dataList1_container"]/tbody/tr/td[2]/a/@href'</span>
+next_page <span class="token operator">=</span> <span class="token string">'//*[@id="dataList1_container_next"]/span'</span>
+
+<span class="token comment"># 获取发行人url列表</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">28</span><span class="token punctuation">)</span><span class="token punctuation">:</span>        <span class="token comment"># 最大页数是28</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"正在抓取第%s页的内容"</span> <span class="token operator">%</span>i<span class="token punctuation">)</span>
+    html <span class="token operator">=</span> driver<span class="token punctuation">.</span>page_source
+    tree <span class="token operator">=</span> etree<span class="token punctuation">.</span>HTML<span class="token punctuation">(</span>html<span class="token punctuation">)</span>
+    url_list <span class="token operator">=</span> tree<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span>url_xpath<span class="token punctuation">)</span>
+    all_url_list<span class="token punctuation">.</span>extend<span class="token punctuation">(</span>url_list<span class="token punctuation">)</span>
+    time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> i<span class="token operator">&lt;=</span><span class="token number">26</span> <span class="token punctuation">:</span> 
+        <span class="token comment"># 点击下一页</span>
+        driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>XPATH<span class="token punctuation">,</span>next_page<span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>   
+        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>        <span class="token comment"># 等待页面加载</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>         
+        <span class="token keyword">pass</span>                 <span class="token comment"># 最后一页没有“下一页”</span>
+driver<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 打印最后10个url，检查是否所有url爬取成功</span>
+<span class="token keyword">for</span> url <span class="token keyword">in</span> all_url_list<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-3-遍历url列表爬取审核问询披露"><a href="#2-3-遍历url列表爬取审核问询披露" class="headerlink" title="2.3 遍历url列表爬取审核问询披露"></a>2.3 遍历url列表爬取审核问询披露</h3><p>在获取了全部发行人url列表之后，我们需要遍历url列表，获取特定发行人审核问询的详情页面。</p>
+<p>在这一页面，我们需要爬取的关键内容如下：</p>
+<ol>
+<li>发行人基本信息：<ul>
+<li>公司全称（fullname）</li>
+<li>公司简称（shortname）</li>
+<li>保荐机构（broker）</li>
+<li>会计师事务所（auditor）</li>
+<li>律师事务所（lawyer）</li>
+<li>受理日期（acceptdate）</li>
+<li>首次问询日期（inquirydate）</li>
+<li>上市委会议通过日期（passdate）</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_Python%E7%88%AC%E5%8F%96%E7%A7%91%E5%88%9B%E6%9D%BF%E5%AE%A1%E6%A0%B8%E9%97%AE%E8%AF%A2%E6%8A%AB%E9%9C%B2%E6%96%87%E4%BB%B6_Fig5.png"></p>
+<ol start="2">
+<li>审核问询披露文件：<ul>
+<li>发行人及保荐机构回复意见</li>
+<li>会计师回复意见</li>
+<li>法律意见书</li>
+</ul>
+</li>
+</ol>
+<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_Python%E7%88%AC%E5%8F%96%E7%A7%91%E5%88%9B%E6%9D%BF%E5%AE%A1%E6%A0%B8%E9%97%AE%E8%AF%A2%E6%8A%AB%E9%9C%B2%E6%96%87%E4%BB%B6_Fig6.png"></p>
+<p>代码如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">
+<span class="token comment">#————爬取每个url对应的科创板发行上市公司页面————#</span>
+
+<span class="token comment"># 导入所需的包</span>
+<span class="token keyword">import</span> time
+<span class="token keyword">from</span> lxml <span class="token keyword">import</span> etree
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
+<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>common<span class="token punctuation">.</span>by <span class="token keyword">import</span> By
+<span class="token keyword">import</span> requests
+<span class="token keyword">import</span> os
+<span class="token keyword">from</span> urllib<span class="token punctuation">.</span>request <span class="token keyword">import</span> urlretrieve
+
+<span class="token comment"># 在路径下创建文件夹</span>
+os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span><span class="token string">r'./companies'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 浏览器驱动配置及使用</span>
+CHROME_OPTIONS <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>ChromeOptions<span class="token punctuation">(</span><span class="token punctuation">)</span>
+prefs <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">"profile.managed_default_content_settings.images"</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">&#125;</span>   <span class="token comment"># 1代表显示图片，2代表不显示图片</span>
+CHROME_OPTIONS<span class="token punctuation">.</span>add_experimental_option<span class="token punctuation">(</span><span class="token string">"prefs"</span><span class="token punctuation">,</span> prefs<span class="token punctuation">)</span>
+CHROME_DRIVER <span class="token operator">=</span> <span class="token string">r'D:/chromedriver/chromedriver.exe'</span>
+driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span>executable_path<span class="token operator">=</span>CHROME_DRIVER<span class="token punctuation">,</span> options<span class="token operator">=</span>CHROME_OPTIONS<span class="token punctuation">)</span>
+
+<span class="token comment"># 发行人基本信息的Xpath定位</span>
+fullname_xpath        <span class="token operator">=</span> <span class="token string">'//*[@id="issuer_full"]'</span>
+shortname_xpath       <span class="token operator">=</span> <span class="token string">'//*[@id="issuer_sec"]'</span>
+broker_xpath          <span class="token operator">=</span> <span class="token string">'//*[@id="sponsor_org"]/a'</span>
+auditor_xpath         <span class="token operator">=</span> <span class="token string">'//*[@id="accounts_org"]/a'</span>
+lawyer_xpath          <span class="token operator">=</span> <span class="token string">'//*[@id="law_firm"]/a'</span>
+acceptdate_xpath      <span class="token operator">=</span> <span class="token string">'//*[@id="step1F"]/div'</span>
+inquirydate_xpath     <span class="token operator">=</span> <span class="token string">'//*[@id="step2F"]/div'</span>
+passdate_xpath        <span class="token operator">=</span> <span class="token string">'//*[@id="step3F"]/div'</span>
+
+<span class="token comment"># 注册制审核问询披露文件的Xpath定位</span>
+SECLetter_xpath       <span class="token operator">=</span> <span class="token string">'//*[@id="yjhf"]/tbody/tr/td[2]/a'</span>
+
+<span class="token comment"># 创建空列表以盛放后续爬虫信息</span>
+all_fullname    <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+all_shortname   <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+all_broker      <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+all_auditor     <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+all_lawyer      <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+all_acceptdate  <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+all_inquirydate <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+all_passdate    <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+all_num_letter1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+all_num_letter2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+all_num_letter3 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+<span class="token keyword">for</span> url_item <span class="token keyword">in</span> all_url_list<span class="token punctuation">:</span>
+    url <span class="token operator">=</span> <span class="token string">'http://kcb.sse.com.cn'</span> <span class="token operator">+</span> url_item
+    driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span> 
+    time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+    html <span class="token operator">=</span> driver<span class="token punctuation">.</span>page_source
+    tree <span class="token operator">=</span> etree<span class="token punctuation">.</span>HTML<span class="token punctuation">(</span>html<span class="token punctuation">)</span>
+    
+    <span class="token comment"># 获取发行人基本信息的文本节点</span>
+    fullname_list    <span class="token operator">=</span> tree<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span>fullname_xpath <span class="token operator">+</span> <span class="token string">'/text()'</span><span class="token punctuation">)</span>
+    all_fullname<span class="token punctuation">.</span>append<span class="token punctuation">(</span>fullname_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    
+    shortname_list   <span class="token operator">=</span> tree<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span>shortname_xpath<span class="token operator">+</span> <span class="token string">'/text()'</span><span class="token punctuation">)</span>
+    all_shortname<span class="token punctuation">.</span>append<span class="token punctuation">(</span>shortname_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    
+    broker_list      <span class="token operator">=</span> tree<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span>broker_xpath<span class="token operator">+</span> <span class="token string">'/text()'</span><span class="token punctuation">)</span>
+    content          <span class="token operator">=</span> <span class="token string">';'</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>broker_list<span class="token punctuation">)</span>  <span class="token comment"># 可能会有多个保荐机构，用分号链接，下同</span>
+    all_broker<span class="token punctuation">.</span>append<span class="token punctuation">(</span>content<span class="token punctuation">)</span>
+    
+    auditor_list     <span class="token operator">=</span> tree<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span>auditor_xpath<span class="token operator">+</span> <span class="token string">'/text()'</span><span class="token punctuation">)</span>
+    content          <span class="token operator">=</span> <span class="token string">';'</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>auditor_list<span class="token punctuation">)</span>
+    all_auditor<span class="token punctuation">.</span>append<span class="token punctuation">(</span>content<span class="token punctuation">)</span>
+    
+    lawyer_list      <span class="token operator">=</span> tree<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span>lawyer_xpath<span class="token operator">+</span> <span class="token string">'/text()'</span><span class="token punctuation">)</span>
+    content          <span class="token operator">=</span> <span class="token string">';'</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>lawyer_list<span class="token punctuation">)</span>
+    all_lawyer<span class="token punctuation">.</span>append<span class="token punctuation">(</span>content<span class="token punctuation">)</span>
+    
+    acceptdate_list  <span class="token operator">=</span> tree<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span>acceptdate_xpath<span class="token operator">+</span> <span class="token string">'/text()'</span><span class="token punctuation">)</span>
+    all_acceptdate<span class="token punctuation">.</span>append<span class="token punctuation">(</span>acceptdate_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    
+    inquirydate_list <span class="token operator">=</span> tree<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span>inquirydate_xpath<span class="token operator">+</span> <span class="token string">'/text()'</span><span class="token punctuation">)</span>
+    all_inquirydate<span class="token punctuation">.</span>append<span class="token punctuation">(</span>inquirydate_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    
+    passdate_list    <span class="token operator">=</span> tree<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span>passdate_xpath<span class="token operator">+</span> <span class="token string">'/text()'</span><span class="token punctuation">)</span>
+    all_passdate<span class="token punctuation">.</span>append<span class="token punctuation">(</span>passdate_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 获取问询与回复信息的文本节点</span>
+    SECLetter_list   <span class="token operator">=</span> tree<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span>SECLetter_xpath  <span class="token operator">+</span> <span class="token string">'/text()'</span><span class="token punctuation">)</span>
+    <span class="token comment"># 获取问询与回复的href属性，为后续下载对应文件pdf做准备</span>
+    SECLetter_url    <span class="token operator">=</span> tree<span class="token punctuation">.</span>xpath<span class="token punctuation">(</span>SECLetter_xpath  <span class="token operator">+</span> <span class="token string">'/@href'</span><span class="token punctuation">)</span>
+    
+    <span class="token comment"># 为每一公司创建子文件夹，用以盛放分类后的文件pdf</span>
+    os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span><span class="token string">'./companies/'</span><span class="token operator">+</span>fullname_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span><span class="token string">'./companies/'</span><span class="token operator">+</span>fullname_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'/问询函和回函/'</span><span class="token punctuation">)</span>
+    os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span><span class="token string">'./companies/'</span><span class="token operator">+</span>fullname_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'/审计意见/'</span><span class="token punctuation">)</span>
+    os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span><span class="token string">'./companies/'</span><span class="token operator">+</span>fullname_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'/法律意见/'</span><span class="token punctuation">)</span>
+    os<span class="token punctuation">.</span>mkdir<span class="token punctuation">(</span><span class="token string">'./companies/'</span><span class="token operator">+</span>fullname_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'/其他/'</span><span class="token punctuation">)</span>
+    
+    <span class="token comment"># 注册制审核问询披露文件的计数算子</span>
+    count_letter1 <span class="token operator">=</span> <span class="token number">0</span>  
+    count_letter2 <span class="token operator">=</span> <span class="token number">0</span>
+    count_letter3 <span class="token operator">=</span> <span class="token number">0</span>
+    
+    <span class="token comment">#获取pdf文件方法1，用requests.get：</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>SECLetter_list<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        url <span class="token operator">=</span> SECLetter_url<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        r <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'http:'</span><span class="token operator">+</span> url<span class="token punctuation">)</span>
+
+        <span class="token comment"># 通过文件名称对文件进行分类，并计数</span>
+        <span class="token keyword">if</span>  <span class="token punctuation">(</span><span class="token string">'发行人'</span><span class="token keyword">in</span> SECLetter_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">or</span> <span class="token punctuation">(</span><span class="token string">'落实函'</span> <span class="token keyword">in</span> SECLetter_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">and</span>  <span class="token punctuation">(</span><span class="token string">'会计'</span> <span class="token keyword">not</span> <span class="token keyword">in</span> SECLetter_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token string">'律师'</span><span class="token keyword">not</span> <span class="token keyword">in</span> SECLetter_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token string">'法律'</span> <span class="token keyword">not</span> <span class="token keyword">in</span> SECLetter_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'./companies/'</span><span class="token operator">+</span>fullname_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'/问询函和回函/'</span><span class="token operator">+</span>SECLetter_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">+</span><span class="token string">'.pdf'</span><span class="token punctuation">,</span> <span class="token string">'wb+'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+                f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>r<span class="token punctuation">.</span>content<span class="token punctuation">)</span>
+                count_letter1 <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">elif</span>  <span class="token string">'会计'</span> <span class="token keyword">in</span> SECLetter_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">:</span>  
+            <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'./companies/'</span><span class="token operator">+</span>fullname_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'/审计意见/'</span><span class="token operator">+</span>SECLetter_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">+</span><span class="token string">'.pdf'</span><span class="token punctuation">,</span> <span class="token string">'wb+'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+                f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>r<span class="token punctuation">.</span>content<span class="token punctuation">)</span>
+                count_letter2 <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">elif</span> <span class="token punctuation">(</span><span class="token string">'律师'</span><span class="token keyword">in</span> SECLetter_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">or</span> <span class="token punctuation">(</span><span class="token string">'法律'</span> <span class="token keyword">in</span> SECLetter_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'./companies/'</span><span class="token operator">+</span>fullname_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'/法律意见/'</span><span class="token operator">+</span>SECLetter_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">+</span><span class="token string">'.pdf'</span><span class="token punctuation">,</span> <span class="token string">'wb+'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+                f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>r<span class="token punctuation">.</span>content<span class="token punctuation">)</span>
+                count_letter3 <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">else</span> <span class="token punctuation">:</span>
+            <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'./companies/'</span><span class="token operator">+</span>fullname_list<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'/其他/'</span><span class="token operator">+</span>SECLetter_list<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">+</span><span class="token string">'.pdf'</span><span class="token punctuation">,</span> <span class="token string">'wb+'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+                f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>r<span class="token punctuation">.</span>content<span class="token punctuation">)</span>
+    
+    all_num_letter1<span class="token punctuation">.</span>append<span class="token punctuation">(</span>count_letter1<span class="token punctuation">)</span>
+    all_num_letter2<span class="token punctuation">.</span>append<span class="token punctuation">(</span>count_letter2<span class="token punctuation">)</span>
+    all_num_letter3<span class="token punctuation">.</span>append<span class="token punctuation">(</span>count_letter3<span class="token punctuation">)</span>
+        
+    <span class="token triple-quoted-string string">'''
+    # 获取pdf文件方法2，用urlretrieve：
+    # 以下代码仅做方法思路展示，未对pdf进行进一步分类
+    for i in range(len(SECLetter_list)):
+        url = 'http:' + SECLetter_url[i]
+        urlretrieve(url,filename = './科创板/companies/'+fullname_list[0]+'/'+SECLetter_list[i]+'.pdf')
+    '''</span>
+driver<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 将爬虫信息储存到本地excel文件</span>
+<span class="token builtin">file</span> <span class="token operator">=</span> <span class="token string">r".\科创板注册制信息披露.xlsx"</span>
+final_data <span class="token operator">=</span> <span class="token punctuation">[</span>all_fullname<span class="token punctuation">,</span>all_shortname<span class="token punctuation">,</span>all_broker<span class="token punctuation">,</span>all_auditor<span class="token punctuation">,</span>all_lawyer<span class="token punctuation">,</span>all_acceptdate<span class="token punctuation">,</span>all_inquirydate<span class="token punctuation">,</span>all_passdate<span class="token punctuation">,</span>all_num_letter1<span class="token punctuation">,</span>all_num_letter2<span class="token punctuation">,</span>all_num_letter3<span class="token punctuation">]</span>
+df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>final_data<span class="token punctuation">)</span><span class="token punctuation">.</span>T
+df<span class="token punctuation">.</span>columns <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"公司全称"</span><span class="token punctuation">,</span> <span class="token string">"公司简称"</span><span class="token punctuation">,</span> <span class="token string">"保荐机构"</span><span class="token punctuation">,</span> <span class="token string">"会计师事务所"</span><span class="token punctuation">,</span> <span class="token string">"律师事务所"</span><span class="token punctuation">,</span><span class="token string">"受理日期"</span><span class="token punctuation">,</span><span class="token string">"开始问询日期"</span><span class="token punctuation">,</span><span class="token string">"上市委通过日期"</span><span class="token punctuation">,</span><span class="token string">"问询与回函数量"</span><span class="token punctuation">,</span><span class="token string">"审计意见数量"</span><span class="token punctuation">,</span><span class="token string">"律师意见数量"</span><span class="token punctuation">]</span>
+df<span class="token punctuation">.</span>to_excel<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">,</span> index <span class="token operator">=</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>最终，我们可以得到如下审核问询情况汇总及审核问询披露文件的原始pdf：<br><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_Python%E7%88%AC%E5%8F%96%E7%A7%91%E5%88%9B%E6%9D%BF%E5%AE%A1%E6%A0%B8%E9%97%AE%E8%AF%A2%E6%8A%AB%E9%9C%B2%E6%96%87%E4%BB%B6_Fig7.png"></p>
+<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_Python%E7%88%AC%E5%8F%96%E7%A7%91%E5%88%9B%E6%9D%BF%E5%AE%A1%E6%A0%B8%E9%97%AE%E8%AF%A2%E6%8A%AB%E9%9C%B2%E6%96%87%E4%BB%B6_Fig8.png"></p>
+<p><strong>注意</strong>：以上代码在计算“问询与回函数量”、“审计意见数量”、“律师意见数量”时仅简单地计数页面上所列示的对应文件的数量，但并不代表发行人实际被问询次数。在现实中，若公司在季度末或者年末更新财务报表，则需根据更新后的财务报表向交易所重新提交以上文件。举个例子：《发行人及保荐机构回复意见》和《发行人及保荐机构回复意见（2022年半年报财务数据更新版）》本质上属于同一份回函的两个版本，计算一次问询次数，而不是两次。此处请读者仔细甄别。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/21/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="FanFan">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="FanFan's Workspace">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/02/21/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-02-21 17:50:26" itemprop="dateCreated datePublished" datetime="2023-02-21T17:50:26+08:00">2023-02-21</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">FanFan</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FanFan</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
 </html>
