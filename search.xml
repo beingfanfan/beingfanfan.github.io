@@ -1,209 +1,9 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-
-<head>
-
-  <!-- Minima -->
-  <!-- Hexo theme created by @adisaktijrs -->
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-
-  
-  <title>Python：基于selenium爬取科创板审核问询披露</title>
-  
-  <link rel="canonical" href="http://example.com/2023/02/21/%E7%A7%91%E5%88%9B%E6%9D%BF%E5%AE%A1%E6%A0%B8%E9%97%AE%E8%AF%A2%E6%8A%AB%E9%9C%B2/">
-  
-  <meta name="description" content="¶1.科创板审核问询披露 科创板试点的注册制改革，强调 “以信息披露为核心”。为在发行上市审核坚持以信息披露为核心，把好上市企业入口质量关，上交所主要采用公开化问询式审核方式，即交易所提出问询的问题，发行人对这些问题进行回复和说明，中介机构对问询事项的核查过程和结论，以“一问一答”的方式及时向市场公">
-  
-  
-  <meta name="author" content="FanFan">
-  
-  
-  
-  <meta property="og:site_name" content="TextMatters" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Python：基于selenium爬取科创板审核问询披露" />
-  
-  <meta property="og:description" content="¶1.科创板审核问询披露 科创板试点的注册制改革，强调 “以信息披露为核心”。为在发行上市审核坚持以信息披露为核心，把好上市企业入口质量关，上交所主要采用公开化问询式审核方式，即交易所提出问询的问题，发行人对这些问题进行回复和说明，中介机构对问询事项的核查过程和结论，以“一问一答”的方式及时向市场公">
-  
-  <meta property="og:url" content="http://example.com/2023/02/21/%E7%A7%91%E5%88%9B%E6%9D%BF%E5%AE%A1%E6%A0%B8%E9%97%AE%E8%AF%A2%E6%8A%AB%E9%9C%B2/" />
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Python：基于selenium爬取科创板审核问询披露">
-  
-  <meta name="twitter:description" content="¶1.科创板审核问询披露 科创板试点的注册制改革，强调 “以信息披露为核心”。为在发行上市审核坚持以信息披露为核心，把好上市企业入口质量关，上交所主要采用公开化问询式审核方式，即交易所提出问询的问题，发行人对这些问题进行回复和说明，中介机构对问询事项的核查过程和结论，以“一问一答”的方式及时向市场公">
-  
-  
-  
-  
-  <meta name="twitter:url" content="http://example.com/2023/02/21/%E7%A7%91%E5%88%9B%E6%9D%BF%E5%AE%A1%E6%A0%B8%E9%97%AE%E8%AF%A2%E6%8A%AB%E9%9C%B2/" />
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Preload fonts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="preload" href="/fonts/dm-serif-display-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  
-<link rel="stylesheet" href="/css/normalize.css">
-
-  
-<link rel="stylesheet" href="/css/skeleton.css">
-
-  
-<link rel="stylesheet" href="/css/custom.css">
-
-  
-<link rel="stylesheet" href="/css/prism-dark.css">
-
-  
-<link rel="stylesheet" href="/css/prism-line-numbers.css">
-
-  <!-- User css -->
-  
-  
-<link rel="stylesheet" href="/css/user.css">
-
-  
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="/images/favicon3.png">
-
-  <!-- Custom Theme Color Style
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <style>
-  a:not(.icon) {
-    text-decoration-color: #0FA0CE;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 50%,
-      #0FA0CE 50%
-    );
-  }
-  blockquote {
-    border-left: 8px solid #0FA0CE;
-  }
-  .nanobar .bar {
-    background: #0FA0CE;
-  }
-  .button.button-primary:hover,
-  button.button-primary:hover,
-  input[type="submit"].button-primary:hover,
-  input[type="reset"].button-primary:hover,
-  input[type="button"].button-primary:hover,
-  .button.button-primary:focus,
-  button.button-primary:focus,
-  input[type="submit"].button-primary:focus,
-  input[type="reset"].button-primary:focus,
-  input[type="button"].button-primary:focus {
-    background-color: #0FA0CE;
-    border-color: #0FA0CE;
-  }
-  input[type="email"]:focus,
-  input[type="number"]:focus,
-  input[type="search"]:focus,
-  input[type="text"]:focus,
-  input[type="tel"]:focus,
-  input[type="url"]:focus,
-  input[type="password"]:focus,
-  textarea:focus,
-  select:focus {
-    border: 1px solid #0FA0CE;
-  }
-</style>
-
-  <!-- Google Analytics (With Privacy Settings On)
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  
-
-  
-  <script src="/js/pic.min.js" defer></script>
-  
-
-  
-  <script src="/js/search.min.js" defer></script>
-  
-
-<meta name="generator" content="Hexo 6.3.0"></head>
-
-<body>
-  <div class="container">
-    <div class="row">
-      <div>
-
-        <div class="row">
-  <div class="two columns" style="max-width: 50px">
-    <h1 class="mt-2 mode">
-      <div onclick=setDarkMode(true) id="darkBtn">🌑</div>
-      <div onclick=setDarkMode(false) id="lightBtn" class=hidden>☀️</div>
-      <script >
-        if (localStorage.getItem('preferredTheme') == 'dark') {
-          setDarkMode(true)
-        }
-        function setDarkMode(isDark) {
-          var darkBtn = document.getElementById('darkBtn')
-          var lightBtn = document.getElementById('lightBtn')
-          if (isDark) {
-            lightBtn.style.display = "block"
-            darkBtn.style.display = "none"
-            localStorage.setItem('preferredTheme', 'dark');
-          } else {
-            lightBtn.style.display = "none"
-            darkBtn.style.display = "block"
-            localStorage.removeItem('preferredTheme');
-          }
-          document.body.classList.toggle("darkmode");
-        }
-      </script>
-    </h1>
-  </div>
-
-  <div class="six columns ml-1">
-    <h1 class="mt-2">
-      TextMatters
-    </h1>
-  </div>
-
-  <div class="twelve columns">
-    <div class="row">
-      <div class="nine columns left">
-        <a href="/">Home</a>
-        
-          
-          <a href="/archives" class="ml">Code</a>
-          
-        
-          
-          <a href="/Data" class="ml">Data</a>
-          
-        
-          
-          <a href="/tags/" class="ml">Tags</a>
-          
-        
-        
-          
-            <a href="mailto:siyufan7-c@my.cityu.edu.hk" target="_blank" class="ml">Email</a>
-          
-        
-      </div>
-    </div>
-    <hr style="margin-bottom: 2.6rem">
-  </div>
-</div>
-
-        <div class="trans">
-            <h2>Python：基于selenium爬取科创板审核问询披露</h2>
-
-  <p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/Lianxh_%E8%A3%85%E9%A5%B0%E9%BB%84%E7%BA%BF.png" alt=""></p>
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Python：基于selenium爬取科创板审核问询披露</title>
+    <url>/2023/02/21/%E7%A7%91%E5%88%9B%E6%9D%BF%E5%AE%A1%E6%A0%B8%E9%97%AE%E8%AF%A2%E6%8A%AB%E9%9C%B2/</url>
+    <content><![CDATA[<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/Lianxh_%E8%A3%85%E9%A5%B0%E9%BB%84%E7%BA%BF.png" alt=""></p>
 <h2 id="1-科创板审核问询披露"><a class="header-anchor" href="#1-科创板审核问询披露">¶</a>1.科创板审核问询披露</h2>
 <p>科创板试点的注册制改革，强调 “以信息披露为核心”。为在发行上市审核坚持以信息披露为核心，把好上市企业入口质量关，上交所主要采用公开化问询式审核方式，即交易所提出问询的问题，发行人对这些问题进行回复和说明，中介机构对问询事项的核查过程和结论，以“一问一答”的方式及时向市场公开。</p>
 <p>文本重点关注如何通过Python的<code>selenium</code>库爬取上述审核问询流程披露的原始文件，并在发行公司层面对问询与回复情况进行汇总统计。</p>
@@ -217,7 +17,7 @@
 <p>接下来，我们需要安装浏览器驱动。此处我们主要讲解windows系统安装chrome浏览器驱动的步骤和方法。其他系统及其他浏览器驱动的安装，请自行网络搜索相关教程。</p>
 <p>首先，我们需要确定chrome浏览器版本。打开chrome浏览器，在新标签页输入 chrome://settings/help 进入设置界面，查看目前的版本信息。</p>
 <p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_Python%E7%88%AC%E5%8F%96%E7%A7%91%E5%88%9B%E6%9D%BF%E5%AE%A1%E6%A0%B8%E9%97%AE%E8%AF%A2%E6%8A%AB%E9%9C%B2%E6%96%87%E4%BB%B6_Fig1.png" alt=""></p>
-<p>在获取浏览器版本信息后，需下载对应版本的浏览器驱动。打开chrome浏览器驱动下载地址：<a target="_blank" rel="noopener" href="http://chromedriver.storage.googleapis.com/index.html">驱动下载地址</a>，找到和目前版本最接近的驱动，Windows系统用户需下载win32版本。</p>
+<p>在获取浏览器版本信息后，需下载对应版本的浏览器驱动。打开chrome浏览器驱动下载地址：<a href="http://chromedriver.storage.googleapis.com/index.html">驱动下载地址</a>，找到和目前版本最接近的驱动，Windows系统用户需下载win32版本。</p>
 <p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_Python%E7%88%AC%E5%8F%96%E7%A7%91%E5%88%9B%E6%9D%BF%E5%AE%A1%E6%A0%B8%E9%97%AE%E8%AF%A2%E6%8A%AB%E9%9C%B2%E6%96%87%E4%BB%B6_Fig2.png" alt=""></p>
 <p>解压驱动文件包得到<code>chromedriver.exe</code>，保存到指定路径，并务必将当前路径添加到环境变量中（我的电脑&gt;&gt;右键属性&gt;&gt;高级系统设置&gt;&gt;高级&gt;&gt;环境变量&gt;&gt;系统变量&gt;&gt;Path）。</p>
 <h3 id="2-2-浏览器驱动配置使用"><a class="header-anchor" href="#2-2-浏览器驱动配置使用">¶</a>2.2 浏览器驱动配置使用</h3>
@@ -467,100 +267,31 @@ df<span class="token punctuation">.</span>to_excel<span class="token punctuation
 <img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_Python%E7%88%AC%E5%8F%96%E7%A7%91%E5%88%9B%E6%9D%BF%E5%AE%A1%E6%A0%B8%E9%97%AE%E8%AF%A2%E6%8A%AB%E9%9C%B2%E6%96%87%E4%BB%B6_Fig7.png" alt=""></p>
 <p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/%E8%8C%83%E6%80%9D%E5%A6%A4_Python%E7%88%AC%E5%8F%96%E7%A7%91%E5%88%9B%E6%9D%BF%E5%AE%A1%E6%A0%B8%E9%97%AE%E8%AF%A2%E6%8A%AB%E9%9C%B2%E6%96%87%E4%BB%B6_Fig8.png" alt=""></p>
 <p><strong>注意</strong>：以上代码在计算“问询与回函数量”、“审计意见数量”、“律师意见数量”时仅简单地计数页面上所列示的对应文件的数量，但并不代表发行人实际被问询次数。在现实中，若公司在季度末或者年末更新财务报表，则需根据更新后的财务报表向交易所重新提交以上文件。举个例子：《发行人及保荐机构回复意见》和《发行人及保荐机构回复意见（2022年半年报财务数据更新版）》本质上属于同一份回函的两个版本，计算一次问询次数，而不是两次。此处请读者仔细甄别。</p>
-
-  <p><a class="classtest-link" href="/tags/python/" rel="tag">python</a> — 2023年2月21日</p>
-  
-  <hr>
-<section id="comments" class="mt-2 mb-3">
-
-  <div id="disqus_thread">
-    <a href="#" class="button button-primary" onclick="loadDisqus();return false;">View / Make Comments</a>
-  </div>
-
-  <script>
-    var disqus_config = function() {
-      this.page.url = 'http://example.com/2023/02/21/科创板审核问询披露/index.html';
-      this.page.identifier = '2023/02/21/科创板审核问询披露/index.html';
-      this.page.title = 'Python：基于selenium爬取科创板审核问询披露';
-    };
-
-    var is_disqus_loaded = false;
-
-    function loadDisqus() {
-      if (!is_disqus_loaded) {
-        is_disqus_loaded = true;
-
-        var d = document,
-          s = d.createElement('script');
-        s.src = 'https://https-beingfanfan-github-io.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      }
-    }
-
-  </script>
-  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
-
-
-
-        </div>
-        <div class="row mt-2">
-  <h3>Search</h3>
-  <div><input id="search-text" title="search" class="search-text" type="text" placeholder="search......"></div>
-  <div style="margin-top: 1.5rem;">
-    <ul id="result"></ul>
-  </div>
-</div>
-
-        <div class="row mt-2">
-  
-    <div class="eight columns">
-      <p id="madewith">努力打破学术壁垒
-        <a class="footer-link icon" href="https://hexo.io" target="_blank" style="text-decoration: none;" rel="noreferrer" aria-label="Hexo.io">
-        <svg class="hexo svg-hov" width="14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Hexo.js</title><path d="M12 .007L1.57 6.056V18.05L12 23.995l10.43-6.049V5.952L12 .007zm4.798 17.105l-.939.521-.939-.521V12.94H9.08v4.172l-.94.521-.938-.521V6.89l.939-.521.939.521v4.172h5.84V6.89l.94-.521.938.521v10.222z"/></svg>
-        </a>
-        
-    </div>
-
-    <!-- Sepcial thanks to https://simpleicons.org/ for the icons -->
-    <div class="four columns mb-3 posisi" >
-      
-      <a class="ml-0 footer-link icon" href="https://github.com/beingfanfan" target="_blank" style="text-decoration: none" rel="noreferrer" aria-label="GitHub">
-        <svg class="github svg-hov" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-      </a>
-      
-
-      
-
-      
-
-      
-
-      
-
-    </div>
-  
-</div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <script src="/js/nanobar.min.js"></script>
-
-  <script>
-    var options = {
-      classname: 'nanobar',
-      id: 'myNanobar'
-    };
-    var nanobar = new Nanobar(options);
-    nanobar.go(30);
-    nanobar.go(76);
-    nanobar.go(100);
-  </script>
-
-</body>
-
-</html>
+]]></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/02/21/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a class="header-anchor" href="#Quick-Start">¶</a>Quick Start</h2>
+<h3 id="Create-a-new-post"><a class="header-anchor" href="#Create-a-new-post">¶</a>Create a new post</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a class="header-anchor" href="#Run-server">¶</a>Run server</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a class="header-anchor" href="#Generate-static-files">¶</a>Generate static files</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a class="header-anchor" href="#Deploy-to-remote-sites">¶</a>Deploy to remote sites</h3>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <tags>
+        <tag>others</tag>
+      </tags>
+  </entry>
+</search>
