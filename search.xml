@@ -27,8 +27,7 @@
   <entry>
     <title>Python：基于selenium爬取科创板审核问询披露</title>
     <url>/2023/02/21/%E7%A7%91%E5%88%9B%E6%9D%BF%E5%AE%A1%E6%A0%B8%E9%97%AE%E8%AF%A2%E6%8A%AB%E9%9C%B2/</url>
-    <content><![CDATA[<p><img src="https://fig-lianxh.oss-cn-shenzhen.aliyuncs.com/Lianxh_%E8%A3%85%E9%A5%B0%E9%BB%84%E7%BA%BF.png"></p>
-<h2 id="1-科创板审核问询披露"><a href="#1-科创板审核问询披露" class="headerlink" title="1.科创板审核问询披露"></a>1.科创板审核问询披露</h2><p>科创板试点的注册制改革，强调 “以信息披露为核心”。为在发行上市审核坚持以信息披露为核心，把好上市企业入口质量关，上交所主要采用公开化问询式审核方式，即交易所提出问询的问题，发行人对这些问题进行回复和说明，中介机构对问询事项的核查过程和结论，以“一问一答”的方式及时向市场公开。</p>
+    <content><![CDATA[<h2 id="1-科创板审核问询披露"><a href="#1-科创板审核问询披露" class="headerlink" title="1.科创板审核问询披露"></a>1.科创板审核问询披露</h2><p>科创板试点的注册制改革，强调 “以信息披露为核心”。为在发行上市审核坚持以信息披露为核心，把好上市企业入口质量关，上交所主要采用公开化问询式审核方式，即交易所提出问询的问题，发行人对这些问题进行回复和说明，中介机构对问询事项的核查过程和结论，以“一问一答”的方式及时向市场公开。</p>
 <p>文本重点关注如何通过Python的<code>selenium</code>库爬取上述审核问询流程披露的原始文件，并在发行公司层面对问询与回复情况进行汇总统计。</p>
 <h2 id="2-爬虫实战"><a href="#2-爬虫实战" class="headerlink" title="2.爬虫实战"></a>2.爬虫实战</h2><h3 id="2-1-安装selenium及浏览器驱动"><a href="#2-1-安装selenium及浏览器驱动" class="headerlink" title="2.1 安装selenium及浏览器驱动"></a>2.1 安装selenium及浏览器驱动</h3><p>本文中，我们使用Python中的<code>selenium</code>库对网页进行爬取。<code>selenium</code>通过创建模拟浏览器的方式进行爬取，可以完全模拟真实用户的动态操作。</p>
 <p>在配置好python环境后，打开命令提示符，并键入如下命令安装<code>selenium</code>库：</p>
