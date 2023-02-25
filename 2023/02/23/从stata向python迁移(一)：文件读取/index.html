@@ -15,7 +15,7 @@
   
   <link rel="canonical" href="http://example.com/2023/02/23/%E4%BB%8Estata%E5%90%91python%E8%BF%81%E7%A7%BB(%E4%B8%80)%EF%BC%9A%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/">
   
-  <meta name="description" content="本文原创，转载请先联系。 参考： pandas官方文档之Comparison with Stata   写在前面 Stata作为一款专业的计量分析软件工具，虽然在传统数据分析领域表现出色，但是它在处理大数据和非结构化数据面前明显缺乏优势，更不要说它在机器学习和深度学习模块上的限制。 因此，掌握Pyt">
+  <meta name="description" content="本文原创，转载请先联系。 参考： pandas官方文档之Comparison with Stata   写在前面Stata作为一款专业的计量分析软件工具，虽然在传统数据分析领域表现出色，但是它在处理大数据和非结构化数据面前明显缺乏优势，更不要说它在机器学习和深度学习模块上的限制。 因此，掌握Pyth">
   
   
   <meta name="author" content="FanFan">
@@ -26,14 +26,14 @@
   <meta property="og:type" content="article" />
   <meta property="og:title" content="从stata向python迁移(一)：文件读取" />
   
-  <meta property="og:description" content="本文原创，转载请先联系。 参考： pandas官方文档之Comparison with Stata   写在前面 Stata作为一款专业的计量分析软件工具，虽然在传统数据分析领域表现出色，但是它在处理大数据和非结构化数据面前明显缺乏优势，更不要说它在机器学习和深度学习模块上的限制。 因此，掌握Pyt">
+  <meta property="og:description" content="本文原创，转载请先联系。 参考： pandas官方文档之Comparison with Stata   写在前面Stata作为一款专业的计量分析软件工具，虽然在传统数据分析领域表现出色，但是它在处理大数据和非结构化数据面前明显缺乏优势，更不要说它在机器学习和深度学习模块上的限制。 因此，掌握Pyth">
   
   <meta property="og:url" content="http://example.com/2023/02/23/%E4%BB%8Estata%E5%90%91python%E8%BF%81%E7%A7%BB(%E4%B8%80)%EF%BC%9A%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/" />
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="从stata向python迁移(一)：文件读取">
   
-  <meta name="twitter:description" content="本文原创，转载请先联系。 参考： pandas官方文档之Comparison with Stata   写在前面 Stata作为一款专业的计量分析软件工具，虽然在传统数据分析领域表现出色，但是它在处理大数据和非结构化数据面前明显缺乏优势，更不要说它在机器学习和深度学习模块上的限制。 因此，掌握Pyt">
+  <meta name="twitter:description" content="本文原创，转载请先联系。 参考： pandas官方文档之Comparison with Stata   写在前面Stata作为一款专业的计量分析软件工具，虽然在传统数据分析领域表现出色，但是它在处理大数据和非结构化数据面前明显缺乏优势，更不要说它在机器学习和深度学习模块上的限制。 因此，掌握Pyth">
   
   
   
@@ -223,15 +223,13 @@
 <p><strong>参考：</strong> pandas官方文档之<em>Comparison with Stata</em></p>
 </blockquote>
 <hr>
-<h1>写在前面</h1>
-<p>Stata作为一款专业的计量分析软件工具，虽然在传统数据分析领域表现出色，但是它在处理大数据和非结构化数据面前明显缺乏优势，更不要说它在机器学习和深度学习模块上的限制。 因此，<strong>掌握Python已经成为了我们进行系统学习文本分析一个必要前提</strong>。</p>
+<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>Stata作为一款专业的计量分析软件工具，虽然在传统数据分析领域表现出色，但是它在处理大数据和非结构化数据面前明显缺乏优势，更不要说它在机器学习和深度学习模块上的限制。 因此，<strong>掌握Python已经成为了我们进行系统学习文本分析一个必要前提</strong>。</p>
 <p>早在之前我自己学习Python运用其进行数据分析时候，我觉得找到一本Stata-Python对应参照指南非常重要，因为我发现Stata和Python在数据处理的底层逻辑上其实差别相当大。因此，对于那些已经习惯了使用Stata甚至对其有严重路径依赖的人（比如我）来说，在最初入门Python数据处理可能会是一件困难的事情。</p>
 <p><strong>“从Stata迁移到Python”的系列推文</strong>参考pandas官方文档之<em>Comparison with Stata</em>，并按照我自己的思路进行撰写。旨在帮助那些习惯使用Stata的人逐步掌握Python的基础知识，并顺利迁移他们的数据处理框架。文章会重点介绍一些常见的数据除了和统计分析的过程，并同时使用Stata和Python代码进行演示，使读者更好地理解两者之间的基本等价命令和区别。</p>
-<p><strong>本文假设你已经提前学会了安装并成功配置了python/anaconda，以及会打开和使用jupyternotebook，如果还没有，请先在搜索引擎上学习以上的安装教程。</strong></p>
+<p><strong>本文假设你已经提前学会了安装并成功配置了python&#x2F;anaconda，以及会打开和使用jupyternotebook，如果还没有，请先在搜索引擎上学习以上的安装教程。</strong></p>
 <hr>
-<h2 id="库的安装"><a class="header-anchor" href="#库的安装">¶</a>库的安装</h2>
-<p>在Python中进行数据分析必要的库包括：NumPy、Pandas等。我们需要安装它们。</p>
-<p>库的安装：Python和Stata都有自己的库管理工具，Python可以使用pip/conda，Stata使用ssc/net。用户可以通过这些工具方便地下载、安装和更新库。</p>
+<h2 id="库的安装"><a href="#库的安装" class="headerlink" title="库的安装"></a>库的安装</h2><p>在Python中进行数据分析必要的库包括：NumPy、Pandas等。我们需要安装它们。</p>
+<p>库的安装：Python和Stata都有自己的库管理工具，Python可以使用pip&#x2F;conda，Stata使用ssc&#x2F;net。用户可以通过这些工具方便地下载、安装和更新库。</p>
 <ul>
 <li>使用pip安装：pip install pandas</li>
 <li>使用conda安装：conda install panda</li>
@@ -239,24 +237,21 @@
 <p>Stata在本地安装完后,在后续跑代码时不必特别申明引入，但是Python需要在代码开头用 <code>import</code>对库进行导入。</p>
 <p>如下，import语句用于引入pandas库并将其命名为“pd”，以便在后续代码中使用pandas库中的函数和方法。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>这将使得pandas库中的函数和方法能够通过pd对象进行调用，例如：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>mydata<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>其中，<code>pd.DataFrame</code>是 <code>pandas</code>库中的一个方法，用于创建一个DataFrame对象，将数据 <code>mydata</code>作为输入。</p>
 <hr>
-<h2 id="数据结构"><a class="header-anchor" href="#数据结构">¶</a>数据结构</h2>
-<h3 id="DataFrame"><a class="header-anchor" href="#DataFrame">¶</a>DataFrame</h3>
-<p>Pandas中的 <code>DataFrame</code>类似于Stata数据集，以⼀张矩阵（行×列）的形式呈现，可以使用行和列的标签或索引访问单个值、行或列的数据。其中，行的索引是index，列的索引是colunms（直觉上，你可以理解为图片最左边和最上面的深灰色区域）。</p>
-<p><img src="https://files.mdnice.com/user/32844/7fc0e386-8f2c-4c14-b7e8-7cca0625a1ee.png" alt=""></p>
-<h3 id="Series"><a class="header-anchor" href="#Series">¶</a>Series</h3>
-<p>DataFrame的每一列都是一个 <code>Series</code>对象，每个 <code>Series</code>对象只能存储一种数据类型。但是，不同的列可以有不同的数据类型。它是pandas中的一种单独的数据结构，但Stata没有单独为单列设计的数据结构。Series中的每个元素都有一个索引（上面讲的columns），该索引可以是任意数据类型，通常是整数或字符串。</p>
+<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="DataFrame"><a href="#DataFrame" class="headerlink" title="DataFrame"></a>DataFrame</h3><p>Pandas中的 <code>DataFrame</code>类似于Stata数据集，以⼀张矩阵（行×列）的形式呈现，可以使用行和列的标签或索引访问单个值、行或列的数据。其中，行的索引是index，列的索引是colunms（直觉上，你可以理解为图片最左边和最上面的深灰色区域）。</p>
+<p><img src="https://files.mdnice.com/user/32844/7fc0e386-8f2c-4c14-b7e8-7cca0625a1ee.png"></p>
+<h3 id="Series"><a href="#Series" class="headerlink" title="Series"></a>Series</h3><p>DataFrame的每一列都是一个 <code>Series</code>对象，每个 <code>Series</code>对象只能存储一种数据类型。但是，不同的列可以有不同的数据类型。它是pandas中的一种单独的数据结构，但Stata没有单独为单列设计的数据结构。Series中的每个元素都有一个索引（上面讲的columns），该索引可以是任意数据类型，通常是整数或字符串。</p>
 <p><strong>一定要记住Series（列）的概念，它在pandas中很重要。许多其他Pandas数据结构，如DataFrame和Panel，都是基于Series构建的，而不是行！</strong></p>
-<h3 id="Index"><a class="header-anchor" href="#Index">¶</a>Index</h3>
-<p>每个DataFrame和Series都有一个Index索引，索引可以被指定，如果没有指定，默认是整数（第一行 = 0，第二行 = 1，依此类推）。</p>
+<h3 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h3><p>每个DataFrame和Series都有一个Index索引，索引可以被指定，如果没有指定，默认是整数（第一行 &#x3D; 0，第二行 &#x3D; 1，依此类推）。</p>
 <p>Stata中没有一个对应的概念，但直觉上（也仅仅是直觉上！），你可以简单理解为，类似于你打开Stata数据浏览窗口时，数据集最左侧的1，2，3……。在 Stata 中，除了可以用暗含索引 <code>_n</code>访问行外，数据基本没有行标签。</p>
-<p><img src="https://files.mdnice.com/user/32844/c1e79dac-0670-459a-99ae-3099132b4268.png" alt=""></p>
+<p><img src="https://files.mdnice.com/user/32844/c1e79dac-0670-459a-99ae-3099132b4268.png"></p>
 <hr>
-<h2 id="读入数据"><a class="header-anchor" href="#读入数据">¶</a>读入数据</h2>
-<p>我们这里直接关注读入外部数据（因为手动input真的很少有人用）。</p>
+<h2 id="读入数据"><a href="#读入数据" class="headerlink" title="读入数据"></a>读入数据</h2><p>我们这里直接关注读入外部数据（因为手动input真的很少有人用）。</p>
 <ul>
 <li>Stata读取xls，csv, 和txt</li>
 </ul>
@@ -268,6 +263,7 @@
 
 <span class="token operator">#</span> csv
 <span class="token command keyword">insheet</span> using <span class="token string-literal"><span class="token string">"filename.txt"</span></span><span class="token punctuation">,</span> <span class="token keyword">clear</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <ul>
 <li>Pandas读取文件</li>
 </ul>
@@ -280,12 +276,13 @@ df <span class="token operator">=</span> pd<span class="token punctuation">.</sp
 df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">'filename.txt'</span><span class="token punctuation">)</span>
 <span class="token comment"># csv</span>
 df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">'filename.csv'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p><code>pd.read_table()</code>函数默认使用制表符作为分隔符来读取文本文件。而 <code>pd.read_csv()</code>函数默认使用逗号作为分隔符来读取文本文件,他们实质上是通用的。<code>pd.read_csv</code>将第一行默认为标题行即列名，行索引为自动添加。</p>
 <p>pandas 也可以读取.dta带有 <code>read_stata()</code>函数格式的 Stata 数据集。</p>
 <pre class="line-numbers language-none"><code class="language-none">df &#x3D; pd.read_stata(&quot;data.dta&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <hr>
-<h2 id="常用读入参数设置"><a class="header-anchor" href="#常用读入参数设置">¶</a>常用读入参数设置</h2>
-<p>我们还可以有以下的参数设置：</p>
+<h2 id="常用读入参数设置"><a href="#常用读入参数设置" class="headerlink" title="常用读入参数设置"></a>常用读入参数设置</h2><p>我们还可以有以下的参数设置：</p>
 <p>csv文件</p>
 <ul>
 <li>filepath_or_buffer：文件路径或缓冲区对象</li>
@@ -304,6 +301,7 @@ df <span class="token operator">=</span> pd<span class="token punctuation">.</sp
 <span class="token comment"># 打印数据框的前5行</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>df<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>excel文件</p>
 <ul>
 <li>io：文件名或类似文件对象的参数</li>
@@ -319,9 +317,9 @@ df <span class="token operator">=</span> pd<span class="token punctuation">.</sp
 
 <span class="token comment"># 打印数据框的前5行</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>df<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <hr>
-<h2 id="输出数据"><a class="header-anchor" href="#输出数据">¶</a>输出数据</h2>
-<p>在Stata中，可以使用export命令将数据输出到.dta、.csv和.txt等格式的文件中。在Python中，可以使用pandas包中的 <code>to_stata</code>、<code>to_csv</code>和 <code>to_excel</code>等函数将数据输出到不同格式的文件中。</p>
+<h2 id="输出数据"><a href="#输出数据" class="headerlink" title="输出数据"></a>输出数据</h2><p>在Stata中，可以使用export命令将数据输出到.dta、.csv和.txt等格式的文件中。在Python中，可以使用pandas包中的 <code>to_stata</code>、<code>to_csv</code>和 <code>to_excel</code>等函数将数据输出到不同格式的文件中。</p>
 <p>以下是将数据输出到不同格式文件的代码示例：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">
 <span class="token comment"># 将数据输出为.dta格式</span>
@@ -336,15 +334,15 @@ df<span class="token punctuation">.</span>to_excel<span class="token punctuation
 <span class="token comment"># 将数据输出为.txt格式</span>
 df<span class="token punctuation">.</span>to_csv<span class="token punctuation">(</span><span class="token string">'data.txt'</span><span class="token punctuation">,</span> sep<span class="token operator">=</span><span class="token string">'\t'</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <hr>
-<h2 id="输出参数设置"><a class="header-anchor" href="#输出参数设置">¶</a>输出参数设置</h2>
-<p>to_csv():</p>
+<h2 id="输出参数设置"><a href="#输出参数设置" class="headerlink" title="输出参数设置"></a>输出参数设置</h2><p>to_csv():</p>
 <ul>
 <li>sep: str, default ‘,’，表示用于分隔数据的字符</li>
 <li>header: bool or list of str, default True，表示是否在输出文件中包含列名，或指定输出的列名列表</li>
 <li>index: bool, default True，表示是否在输出文件中包含行索引</li>
 <li>encoding: str, default ‘utf-8’，表示输出文件的编码方式</li>
-<li>mode: str, default ‘w’，表示打开文件的模式，'w’表示覆盖写入，'a’表示追加写入</li>
+<li>mode: str, default ‘w’，表示打开文件的模式，’w’表示覆盖写入，’a’表示追加写入</li>
 </ul>
 <p>to_excel():</p>
 <ul>
@@ -353,16 +351,16 @@ df<span class="token punctuation">.</span>to_csv<span class="token punctuation">
 <li>header: bool or list of str, default True，表示是否在输出文件中包含列名，或指定输出的列名列表</li>
 <li>index: bool, default True，表示是否在输出文件中包含行索引</li>
 <li>encoding: str, default ‘utf-8’，表示输出文件的编码方式</li>
-<li>mode: str, default ‘w’，表示打开文件的模式，'w’表示覆盖写入，'a’表示追加写入</li>
+<li>mode: str, default ‘w’，表示打开文件的模式，’w’表示覆盖写入，’a’表示追加写入</li>
 </ul>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 将DataFrame数据写入csv文件</span>
 df<span class="token punctuation">.</span>to_csv<span class="token punctuation">(</span><span class="token string">'output.csv'</span><span class="token punctuation">,</span> sep<span class="token operator">=</span><span class="token string">'\t'</span><span class="token punctuation">,</span> header<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> index<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span>
 
 <span class="token comment"># 将DataFrame数据写入Excel文件</span>
 df<span class="token punctuation">.</span>to_excel<span class="token punctuation">(</span><span class="token string">'output.xlsx'</span><span class="token punctuation">,</span> sheet_name<span class="token operator">=</span><span class="token string">'Sheet1'</span><span class="token punctuation">,</span> header<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> index<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <hr>
-<h1>结束语</h1>
-<p>未完待续，该系列其他推文正在撰写，敬请期待。</p>
+<h1 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h1><p>未完待续，该系列其他推文正在撰写，敬请期待。</p>
 
   <p><a class="classtest-link" href="/tags/code/" rel="tag">code</a> — 2023年2月23日</p>
   
