@@ -38,10 +38,7 @@
 <p><img src="https://s2.loli.net/2023/02/25/rqtYWBpXcz9xLl5.png" alt="pic3.jpg"></p>
 <hr>
 <h2 id="读入数据"><a href="#读入数据" class="headerlink" title="读入数据"></a>读入数据</h2><p>我们这里直接关注读入外部数据（因为手动input真的很少有人用）。</p>
-<ul>
-<li>Stata读取xls，csv, 和txt</li>
-</ul>
-<pre class="line-numbers language-stata" data-language="stata"><code class="language-stata"><span class="token operator">#</span> xls
+<h3 id="Stata读取xls，csv-和txt"><a href="#Stata读取xls，csv-和txt" class="headerlink" title="Stata读取xls，csv, 和txt"></a>Stata读取xls，csv, 和txt</h3><pre class="line-numbers language-stata" data-language="stata"><code class="language-stata"><span class="token operator">#</span> xls
 <span class="token command keyword">import</span> excel <span class="token string-literal"><span class="token string">"filename.xls"</span></span><span class="token punctuation">,</span> <span class="token keyword">clear</span> <span class="token function">sheet</span><span class="token punctuation">(</span>sheername<span class="token punctuation">)</span> firstrow
 
 <span class="token operator">#</span> txt
@@ -50,10 +47,7 @@
 <span class="token operator">#</span> csv
 <span class="token command keyword">insheet</span> using <span class="token string-literal"><span class="token string">"filename.txt"</span></span><span class="token punctuation">,</span> <span class="token keyword">clear</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<ul>
-<li>Pandas读取文件</li>
-</ul>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<h3 id="Pandas读取文件"><a href="#Pandas读取文件" class="headerlink" title="Pandas读取文件"></a>Pandas读取文件</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
 
 <span class="token comment"># xlsx</span>
 df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span><span class="token string">'filename.xlsx'</span><span class="token punctuation">)</span>
@@ -69,8 +63,7 @@ df <span class="token operator">=</span> pd<span class="token punctuation">.</sp
 
 <hr>
 <h2 id="3-常用读入参数设置"><a href="#3-常用读入参数设置" class="headerlink" title="3. 常用读入参数设置"></a>3. 常用读入参数设置</h2><p>我们还可以有以下的参数设置：</p>
-<p>csv文件</p>
-<ul>
+<h3 id="csv文件"><a href="#csv文件" class="headerlink" title="csv文件"></a>csv文件</h3><ul>
 <li>filepath_or_buffer：文件路径或缓冲区对象</li>
 <li>sep：字段分隔符，默认为逗号</li>
 <li>header：指定哪一行为列名，默认为0，即第一行</li>
@@ -88,8 +81,7 @@ df <span class="token operator">=</span> pd<span class="token punctuation">.</sp
 <span class="token keyword">print</span><span class="token punctuation">(</span>df<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>excel文件</p>
-<ul>
+<h3 id="excel文件"><a href="#excel文件" class="headerlink" title="excel文件"></a>excel文件</h3><ul>
 <li>io：文件名或类似文件对象的参数</li>
 <li>sheet_name：要读取的工作表的名称或索引，默认为第一个工作表</li>
 <li>header：指定哪一行为列名，默认为0，即第一行</li>
@@ -122,16 +114,14 @@ df<span class="token punctuation">.</span>to_csv<span class="token punctuation">
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <hr>
-<h2 id="5-常用输出参数设置"><a href="#5-常用输出参数设置" class="headerlink" title="5. 常用输出参数设置"></a>5. 常用输出参数设置</h2><p>to_csv():</p>
-<ul>
+<h2 id="5-常用输出参数设置"><a href="#5-常用输出参数设置" class="headerlink" title="5. 常用输出参数设置"></a>5. 常用输出参数设置</h2><h3 id="to-csv"><a href="#to-csv" class="headerlink" title="to_csv()"></a>to_csv()</h3><ul>
 <li>sep: str, default ‘,’，表示用于分隔数据的字符</li>
 <li>header: bool or list of str, default True，表示是否在输出文件中包含列名，或指定输出的列名列表</li>
 <li>index: bool, default True，表示是否在输出文件中包含行索引</li>
 <li>encoding: str, default ‘utf-8’，表示输出文件的编码方式</li>
 <li>mode: str, default ‘w’，表示打开文件的模式，’w’表示覆盖写入，’a’表示追加写入</li>
 </ul>
-<p>to_excel():</p>
-<ul>
+<h3 id="to-excel"><a href="#to-excel" class="headerlink" title="to_excel()"></a>to_excel()</h3><ul>
 <li>excel_writer: str or ExcelWriter object，表示输出文件的路径或ExcelWriter对象</li>
 <li>sheet_name: str, default ‘Sheet1’，表示输出到Excel中的工作表名</li>
 <li>header: bool or list of str, default True，表示是否在输出文件中包含列名，或指定输出的列名列表</li>
