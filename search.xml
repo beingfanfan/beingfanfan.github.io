@@ -53,12 +53,12 @@
 <p>其中，<code>pd.DataFrame</code>是 <code>pandas</code>库中的一个方法，用于创建一个DataFrame对象，将数据 <code>mydata</code>作为输入。</p>
 <hr>
 <h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="DataFrame"><a href="#DataFrame" class="headerlink" title="DataFrame"></a>DataFrame</h3><p>Pandas中的 <code>DataFrame</code>类似于Stata数据集，以⼀张矩阵（行×列）的形式呈现，可以使用行和列的标签或索引访问单个值、行或列的数据。其中，行的索引是index，列的索引是colunms（直觉上，你可以理解为图片最左边和最上面的深灰色区域）。</p>
-<p><img src="https://files.mdnice.com/user/32844/7fc0e386-8f2c-4c14-b7e8-7cca0625a1ee.png"></p>
+<p><img src="https://raw.githubusercontent.com/beingfanfan/blog/master/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230225130534.png?token=AWZLMQPH2TUZWHPG4XGFHDLD7GWJC"></p>
 <h3 id="Series"><a href="#Series" class="headerlink" title="Series"></a>Series</h3><p>DataFrame的每一列都是一个 <code>Series</code>对象，每个 <code>Series</code>对象只能存储一种数据类型。但是，不同的列可以有不同的数据类型。它是pandas中的一种单独的数据结构，但Stata没有单独为单列设计的数据结构。Series中的每个元素都有一个索引（上面讲的columns），该索引可以是任意数据类型，通常是整数或字符串。</p>
 <p><strong>一定要记住Series（列）的概念，它在pandas中很重要。许多其他Pandas数据结构，如DataFrame和Panel，都是基于Series构建的，而不是行！</strong></p>
 <h3 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h3><p>每个DataFrame和Series都有一个Index索引，索引可以被指定，如果没有指定，默认是整数（第一行 &#x3D; 0，第二行 &#x3D; 1，依此类推）。</p>
 <p>Stata中没有一个对应的概念，但直觉上（也仅仅是直觉上！），你可以简单理解为，类似于你打开Stata数据浏览窗口时，数据集最左侧的1，2，3……。在 Stata 中，除了可以用暗含索引 <code>_n</code>访问行外，数据基本没有行标签。</p>
-<p><img src="https://files.mdnice.com/user/32844/c1e79dac-0670-459a-99ae-3099132b4268.png"></p>
+<p><img src="https://raw.githubusercontent.com/beingfanfan/blog/master/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230225130911.png?token=AWZLMQJEMA6EYZ2HTLEOIETD7GWJE"></p>
 <hr>
 <h2 id="读入数据"><a href="#读入数据" class="headerlink" title="读入数据"></a>读入数据</h2><p>我们这里直接关注读入外部数据（因为手动input真的很少有人用）。</p>
 <ul>
