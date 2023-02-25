@@ -27,7 +27,8 @@
   <entry>
     <title>从stata向python迁移(一)：文件读取</title>
     <url>/2023/02/23/%E4%BB%8Estata%E5%90%91python%E8%BF%81%E7%A7%BB(%E4%B8%80)%EF%BC%9A%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/</url>
-    <content><![CDATA[<blockquote>
+    <content><![CDATA[<p><img src="https://raw.githubusercontent.com/beingfanfan/blog/master/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20230225023055.jpg?token=AWZLMQM7XFDFSXD7BLAQRHLD7GXJW"></p>
+<blockquote>
 <p>本文原创，转载请先联系。</p>
 <p><strong>参考：</strong> pandas官方文档之<em>Comparison with Stata</em></p>
 </blockquote>
